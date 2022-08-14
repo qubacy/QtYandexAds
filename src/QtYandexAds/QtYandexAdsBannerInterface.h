@@ -13,7 +13,7 @@ class QTYANDEXADSSHARED_EXPORT QtYandexAdsBannerInterface : public QObject
 {
     Q_OBJECT
     
-protected:
+public:
     constexpr static const char* C_TEST_UNIT_ID = "R-M-DEMO-300x250";
     
 public:

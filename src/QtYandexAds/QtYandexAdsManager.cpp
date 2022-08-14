@@ -12,6 +12,10 @@ std::shared_ptr<QtYandexAdsBannerInterface> QtYandexAdsManager::generateAdBanner
 #else
     
 #endif
+    
+    if (!ad->setUnitId(QtYandexAdsBannerInterface::C_TEST_UNIT_ID))
+        return std::shared_ptr<QtYandexAdsBannerInterface>{nullptr};
+    
     return ad;
 }
 
