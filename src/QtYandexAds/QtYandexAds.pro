@@ -1,13 +1,23 @@
 QT     += core gui qml
 
-CONFIG += c++17 console
+CONFIG += c++17
 
 TARGET = QtYandexAds
 TEMPLATE = app
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    AdError.cpp \
+    QmlYandexAdsBanner.cpp \
+    QtYandexAdsBannerAndroid.cpp \
+    QtYandexAdsBannerInterface.cpp \
+    QtYandexAdsManager.cpp
 
 HEADERS  += \
+    AdError.h \
+    QmlYandexAdsBanner.h \
+    QtYandexAdsBannerAndroid.h \
+    QtYandexAdsBannerInterface.h \
+    QtYandexAdsManager.h
 
 include( ../../common.pri )
 include( ../../app.pri )

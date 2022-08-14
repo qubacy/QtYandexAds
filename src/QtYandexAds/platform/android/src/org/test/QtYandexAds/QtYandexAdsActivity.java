@@ -7,7 +7,6 @@ import com.yandex.mobile.ads.banner.AdSize;
 import com.yandex.mobile.ads.banner.BannerAdView;
 import com.yandex.mobile.ads.banner.BannerAdEventListener;
 
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -20,6 +19,8 @@ import java.util.ArrayList;
 import android.widget.FrameLayout;
 
 public class QtYandexAdsActivity extends QtActivity {
+    private int m_Id;
+    
     private ViewGroup m_ViewGroup;
 
     private BannerAdView m_BannerAdView = null;
@@ -34,6 +35,10 @@ public class QtYandexAdsActivity extends QtActivity {
     private int m_StatusBarHeight = 0;
 
     private int m_ReadyToRequest = 0x00;
+    
+    public int GetBannerId() {
+        return m_Id;
+    }
 
     private int GetStatusBarHeight() {
         Rect rectangle = new Rect();
@@ -61,8 +66,7 @@ public class QtYandexAdsActivity extends QtActivity {
         });
     }
 
-    public void SetAdBannerSize(final int size)
-    {
+    public void SetAdBannerSize(final int size) {
         final QtYandexAdsActivity self = this;
 
         runOnUiThread(new Runnable() {
@@ -172,13 +176,16 @@ public class QtYandexAdsActivity extends QtActivity {
         });
     }
 
-    public void InitializeAdBanner() {
+    public void InitializeAdBanner(int bannerId) {
         final QtYandexAdsActivity self = this;
+        
+        if (bannerId < 0) return;
 
         runOnUiThread(new Runnable() {
             public void run() {
                 if (m_BannerAdView != null) return;
-
+                
+                m_Id              = bannerId;
                 m_StatusBarHeight = GetStatusBarHeight();
 
                 m_BannerAdView = new BannerAdView(self);
