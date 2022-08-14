@@ -76,11 +76,11 @@ public class QtYandexAdsActivity extends QtActivity {
                 // FIXME: decide banner ENUM storing issue
 
                 switch (size) {
-                    case 0: { adSize = AdSize.BANNER_320x50;  break; }
-                    case 1: { adSize = AdSize.BANNER_320x100; break; }
-                    case 2: { adSize = AdSize.BANNER_400x240; break; }
-                    case 3: { adSize = AdSize.BANNER_728x90;  break; }
-                    case 4: { adSize = AdSize.FULL_SCREEN;    break; }
+                    case 1: { adSize = AdSize.BANNER_320x50;  break; }
+                    case 2: { adSize = AdSize.BANNER_320x100; break; }
+                    case 3: { adSize = AdSize.BANNER_400x240; break; }
+                    case 4: { adSize = AdSize.BANNER_728x90;  break; }
+                    case 5: { adSize = AdSize.FULL_SCREEN;    break; }
                 };
 
                 m_BannerAdView.setAdSize(adSize);

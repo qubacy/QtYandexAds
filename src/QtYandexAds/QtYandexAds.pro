@@ -18,12 +18,12 @@ SOURCES += AdError.cpp \
     QtYandexAdsManager.cpp
 
 HEADERS  += \
-    QtYandexAds_global.h \
-    AdError.h \
-    QmlYandexAdsBanner.h \
-    QtYandexAdsBannerAndroid.h \
-    QtYandexAdsBannerInterface.h \
-    QtYandexAdsManager.h
+    $${INC_PATH}\QtYandexAds_global.h \
+    $${INC_PATH}\AdError.h \
+    $${INC_PATH}\QmlYandexAdsBanner.h \
+    $${INC_PATH}\QtYandexAdsBannerAndroid.h \
+    $${INC_PATH}\QtYandexAdsBannerInterface.h \
+    $${INC_PATH}\QtYandexAdsManager.h
 
 PLATFORMS_DIR = $$PWD/platform
 
