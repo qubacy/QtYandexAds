@@ -1,0 +1,12 @@
+#ifndef QTYANDEXADS_GLOBAL_H
+#define QTYANDEXADS_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+ 
+#if defined(QTYANDEXADS_LIBRARY)
+#  define QTYANDEXADSSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define QTYANDEXADSSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // QTYANDEXADS_GLOBAL_H

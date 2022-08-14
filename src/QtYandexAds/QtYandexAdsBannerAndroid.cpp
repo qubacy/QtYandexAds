@@ -47,6 +47,13 @@ std::shared_ptr<QtYandexAdsBannerAndroid> QtYandexAdsBannerAndroid::getInstanceB
 QtYandexAdsBannerAndroid::~QtYandexAdsBannerAndroid()
 {
     // FIXME: ad disposing...
+    
+    m_instances->remove(m_bannerId);
+    
+    setVisible(false);
+    
+    if (isValid())
+        m_jniActivity->callMethod<void>("ShutdownAdBanner");
 }
 
 bool QtYandexAdsBannerAndroid::initialize()
@@ -80,15 +87,103 @@ bool QtYandexAdsBannerAndroid::initialize()
     return true;
 }
 
+bool QtYandexAdsBannerAndroid::setUnitId(const QString &unitId)
+{
+    if (!isValid()) return false;
+    if (!QtYandexAdsBannerInterface::setUnitId(unitId)) 
+        return false;
+    
+    QAndroidJniObject jUnitIdObj{QAndroidJniObject::fromString(unitId)};
+    
+    m_jniActivity->callMethod<void>("SetAdBannerUnitId", "(Ljava/lang/String;)V", jUnitIdObj.object<jstring>());
+
+    return true;
+}
+
+const QString &QtYandexAdsBannerAndroid::unitId() const
+{
+    return m_unitId;
+}
+
+bool QtYandexAdsBannerAndroid::setSize(Sizes size)
+{
+    if (!isValid()) return false;
+    if (!QtYandexAdsBannerInterface::setSize(size)) 
+        return false;
+    
+    m_jniActivity->callMethod<void>("SetAdBannerSize", "(I)V", static_cast<jint>(size));
+
+    return true;
+}
+
+QtYandexAdsBannerInterface::Sizes QtYandexAdsBannerAndroid::size() const
+{
+    return m_size;
+}
+
+QSize QtYandexAdsBannerAndroid::sizeInPixels()
+{
+    int width {m_jniActivity->callMethod<int>("GetAdBannerWidth")};
+    int height{m_jniActivity->callMethod<int>("GetAdBannerHeight")};
+   
+    return QSize(width, height);
+}
+
+bool QtYandexAdsBannerAndroid::setPosition(const QPoint &position)
+{
+    if (!isValid()) return false;
+    if (!QtYandexAdsBannerInterface::setPosition(position))
+        return false;
+    
+    m_jniActivity->callMethod<void>("SetAdBannerPosition", "(II)V", position.x(), position.y());
+    
+    return QtYandexAdsBannerInterface::setPosition(position);
+}
+
+const QPoint &QtYandexAdsBannerAndroid::position() const
+{
+    return m_position;
+}
+
+bool QtYandexAdsBannerAndroid::setVisible(bool isVisible)
+{
+    if (!isValid()) return false;
+   
+    if (isVisible)
+        m_jniActivity->callMethod<void>("ShowAdBanner");
+    else
+        m_jniActivity->callMethod<void>("HideAdBanner");
+    
+    return true;
+}
+
+bool QtYandexAdsBannerAndroid::visible()
+{
+    if (!isValid()) return false;
+    
+    bool isVisible = m_jniActivity->callMethod<jboolean>("IsAdBannerShowed", "()Z");
+    
+    return isVisible;
+}
+
+bool QtYandexAdsBannerAndroid::isLoaded()
+{
+    if (!isValid()) return false;
+    
+    bool isLoaded = m_jniActivity->callMethod<jboolean>("IsAdBannerLoaded", "()Z");
+    
+    return isLoaded;
+}
+
 bool QtYandexAdsBannerAndroid::prepareNativeContext(QAndroidJniEnvironment &env, 
                                                     const jclass jActivityClass)
 {
     if (env->ExceptionCheck()) return false;
     
-    JNINativeMethod methods[] {{"onBannerLoaded",     "(V)V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoaded)},
-                               {"onBannerLoading",    "(V)V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoading)},
-                               {"onBannerClicked",    "(V)V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerClicked)},
-                               {"onBannerClosed",     "(V)V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerClosed)},
+    JNINativeMethod methods[] {{"onBannerLoaded",     "()V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoaded)},
+                               {"onBannerLoading",    "()V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoading)},
+                               {"onBannerClicked",    "()V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerClicked)},
+                               {"onBannerClosed",     "()V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerClosed)},
                                {"onBannerLoadFail",   "(I)V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoadFail)},
                                {"onBannerImpression", "(Ljava/lang/String;)V", reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerImpression)}};
     
@@ -157,7 +252,7 @@ std::shared_ptr<QtYandexAdsBannerAndroid> QtYandexAdsBannerAndroid::getInstanceB
     }
     
     QAndroidJniObject jObj{thiz};
-    auto bannerId = jObj.callMethod<QtYandexAdsBannerAndroid::BannerId>("GetBannerId", "(V)I");
+    auto bannerId = jObj.callMethod<QtYandexAdsBannerAndroid::BannerId>("GetBannerId", "()I");
    
     auto curBannerInstance = getInstanceById(bannerId);
     
@@ -168,4 +263,9 @@ std::shared_ptr<QtYandexAdsBannerAndroid> QtYandexAdsBannerAndroid::getInstanceB
     }
     
     return curBannerInstance;
+}
+
+bool QtYandexAdsBannerAndroid::isValid() const
+{
+    return (m_jniActivity->isValid());
 }

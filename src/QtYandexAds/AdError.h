@@ -1,10 +1,12 @@
 #ifndef ADERROR_H
 #define ADERROR_H
 
+#include "QtYandexAds_global.h"
+
 #include <QString>
 #include <QMetaType>
 
-class AdError
+class QTYANDEXADSSHARED_EXPORT AdError
 {
     Q_GADGET
     

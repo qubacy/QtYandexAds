@@ -1,12 +1,14 @@
 #ifndef QTYANDEXADSBANNERANDROID_H
 #define QTYANDEXADSBANNERANDROID_H
 
+#include "QtYandexAds_global.h"
+
 #include <QAndroidJniEnvironment>
 #include <QAndroidJniObject>
 
 #include "QtYandexAdsBannerInterface.h"
 
-class QtYandexAdsBannerAndroid : public QtYandexAdsBannerInterface
+class QTYANDEXADSSHARED_EXPORT QtYandexAdsBannerAndroid : public QtYandexAdsBannerInterface
 {
     Q_OBJECT
     
@@ -24,7 +26,7 @@ class QtYandexAdsBannerAndroid : public QtYandexAdsBannerInterface
     
     static const AdError getAdErrorByErrorCode(ErrorCode code);
     
-private:
+public:
     explicit QtYandexAdsBannerAndroid(QObject *parent = nullptr);
     
 public:
@@ -37,17 +39,17 @@ public:
     
     virtual bool initialize() override;
     
-    virtual void setUnitId(const QString &unitId) override;
+    virtual bool setUnitId(const QString &unitId) override;
     virtual const QString &unitId() const override;
     
-    virtual void setSize(Sizes size) override;
+    virtual bool setSize(Sizes size) override;
     virtual Sizes size() const override;
     virtual QSize sizeInPixels() override;
     
-    virtual void setPosition(const QPoint &position) override;
+    virtual bool setPosition(const QPoint &position) override;
     virtual const QPoint &position() const override;
     
-    virtual void setVisible(bool isVisible) override;
+    virtual bool setVisible(bool isVisible) override;
     virtual bool visible() override;
     
     virtual bool isLoaded() override;
@@ -67,8 +69,10 @@ private:
     
     static std::shared_ptr<QtYandexAdsBannerAndroid> getInstanceByJavaObjectWithCheck(JNIEnv *env, jobject thiz);
     
+    bool isValid() const;
+    
 private:
-    BannerId m_bannerId;
+    BannerId                           m_bannerId;
     std::unique_ptr<QAndroidJniObject> m_jniActivity;
     
     static bool     m_isNativeContextPrepared;

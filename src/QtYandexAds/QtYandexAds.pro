@@ -1,35 +1,46 @@
+include( ../../common.pri )
+include( ../../lib.pri )
+
 QT     += core gui qml
 
 CONFIG += c++17
 
-TARGET = QtYandexAds
-TEMPLATE = app
+TARGET = QtYandexAds$${LIB_SUFFIX}
+TEMPLATE = lib
 
-SOURCES += main.cpp \
-    AdError.cpp \
+DEFINES += QTYANDEXADS_LIBRARY
+DEFINES += QT_DEPRECATED_WARNINGS
+
+SOURCES += AdError.cpp \
     QmlYandexAdsBanner.cpp \
     QtYandexAdsBannerAndroid.cpp \
     QtYandexAdsBannerInterface.cpp \
     QtYandexAdsManager.cpp
 
 HEADERS  += \
+    QtYandexAds_global.h \
     AdError.h \
     QmlYandexAdsBanner.h \
     QtYandexAdsBannerAndroid.h \
     QtYandexAdsBannerInterface.h \
     QtYandexAdsManager.h
 
-include( ../../common.pri )
-include( ../../app.pri )
-
-#LIBS += -lQtLib$${LIB_SUFFIX}
-
 PLATFORMS_DIR = $$PWD/platform
 
 android {
     ANDROID_PACKAGE_SOURCE_DIR = $${PLATFORMS_DIR}/android
 
-    android:QT += androidextras gui-private
+    QT += androidextras gui-private
+}
+
+win32 {
+    QMAKE_TARGET_PRODUCT = QtYandexAds Lib
+    QMAKE_TARGET_DESCRIPTION = Test QtYandexAds library
+}
+
+unix {
+    target.path = /usr/lib
+    INSTALLS += target
 }
 
 DISTFILES += \
