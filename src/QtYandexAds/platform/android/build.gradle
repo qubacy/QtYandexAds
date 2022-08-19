@@ -19,8 +19,9 @@ apply plugin: 'com.android.application'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     implementation 'com.yandex.android:mobileads:5.2.0'
+    implementation 'com.yandex.android:mobileads:5.2.0'
+    implementation 'com.yandex.android:mobmetricalib:5.0.1'
     implementation 'com.yandex.ads.mediation:mobileads-admob:20.5.0.1'
-    implementation 'com.google.android.gms:play-services-ads:20.5.0'
 }
 
 android {

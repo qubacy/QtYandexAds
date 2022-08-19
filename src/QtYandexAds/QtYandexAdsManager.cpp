@@ -21,10 +21,15 @@ std::shared_ptr<QtYandexAdsBannerInterface> QtYandexAdsManager::generateAdBanner
 
 std::shared_ptr<QtYandexAdsBannerAndroid> QtYandexAdsManager::generateAdBannerAndroid()
 {
-    std::shared_ptr<QtYandexAdsBannerAndroid> adAndroid{std::make_shared<QtYandexAdsBannerAndroid>()};
+    if (!QtYandexAdsBannerAndroid::initializeContext())
+        return std::shared_ptr<QtYandexAdsBannerAndroid>();
+    
+    // instance:
+    
+    std::shared_ptr<QtYandexAdsBannerAndroid> adAndroid{QtYandexAdsBannerAndroid::generateInstance()};
 
-    if (!adAndroid->initialize())
-        return std::shared_ptr<QtYandexAdsBannerAndroid>{nullptr};
+    if (!adAndroid.get())
+        return adAndroid;
     
     return adAndroid;
 }

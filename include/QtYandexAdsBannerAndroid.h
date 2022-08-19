@@ -3,6 +3,8 @@
 
 #include "QtYandexAds_global.h"
 
+#include <QtAndroid>
+#include <QAndroidIntent>
 #include <QAndroidJniEnvironment>
 #include <QAndroidJniObject>
 
@@ -32,12 +34,14 @@ public:
 public:
     using BannerId = jint;
     
+    static bool initializeContext();
+    
     static std::shared_ptr<QtYandexAdsBannerAndroid> generateInstance();
     static std::shared_ptr<QtYandexAdsBannerAndroid> getInstanceById (const BannerId id);
     
     virtual ~QtYandexAdsBannerAndroid() override;
     
-    virtual bool initialize() override;
+//    virtual bool initialize() override;
     
     virtual bool setUnitId(const QString &unitId) override;
     virtual const QString &unitId() const override;
@@ -54,26 +58,27 @@ public:
     
     virtual bool isLoaded() override;
     
+    BannerId getBannerId() const;
+    
 private:
     bool prepareNativeContext(QAndroidJniEnvironment &env,
                               const jclass jActivityClass);
     
-    static void processBannerLoading   (JNIEnv *env, jobject thiz);
-    static void processBannerLoaded    (JNIEnv *env, jobject thiz);
-    static void processBannerClosed    (JNIEnv *env, jobject thiz);
-    static void processBannerClicked   (JNIEnv *env, jobject thiz);
-    static void processBannerLoadFail  (JNIEnv *env, jobject thiz, const jint rawErrorCode);
-    static void processBannerImpression(JNIEnv *env, jobject thiz, const jstring rawImpressionJsonData);
+    static void processBannerLoading   (JNIEnv *env, jobject thiz, const jint bannerId);
+    static void processBannerLoaded    (JNIEnv *env, jobject thiz, const jint bannerId);
+    static void processBannerClosed    (JNIEnv *env, jobject thiz, const jint bannerId);
+    static void processBannerClicked   (JNIEnv *env, jobject thiz, const jint bannerId);
+    static void processBannerLoadFail  (JNIEnv *env, jobject thiz, const jint bannerId, const jint rawErrorCode);
+    static void processBannerImpression(JNIEnv *env, jobject thiz, const jint bannerId, const jstring rawImpressionJsonData);
     
     void initializeBannerId();
     
-    static std::shared_ptr<QtYandexAdsBannerAndroid> getInstanceByJavaObjectWithCheck(JNIEnv *env, jobject thiz);
+    static std::shared_ptr<QtYandexAdsBannerAndroid> getInstanceByJavaObjectIdWithCheck(JNIEnv *env, jobject thiz, const jint bannerId);
     
     bool isValid() const;
-    
+        
 private:
-    BannerId                           m_bannerId;
-    std::unique_ptr<QAndroidJniObject> m_jniActivity;
+    BannerId m_bannerId;
     
     static bool     m_isNativeContextPrepared;
     static BannerId m_curBannerId;

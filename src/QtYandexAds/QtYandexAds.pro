@@ -3,7 +3,7 @@ include( ../../lib.pri )
 
 QT     += core gui qml
 
-CONFIG += c++17
+CONFIG += c++17 staticlib
 
 TARGET = QtYandexAds$${LIB_SUFFIX}
 TEMPLATE = lib
@@ -18,12 +18,12 @@ SOURCES += AdError.cpp \
     QtYandexAdsManager.cpp
 
 HEADERS  += \
-    $${INC_PATH}\QtYandexAds_global.h \
-    $${INC_PATH}\AdError.h \
-    $${INC_PATH}\QmlYandexAdsBanner.h \
-    $${INC_PATH}\QtYandexAdsBannerAndroid.h \
-    $${INC_PATH}\QtYandexAdsBannerInterface.h \
-    $${INC_PATH}\QtYandexAdsManager.h
+    $${INC_PATH}/QtYandexAds_global.h \
+    $${INC_PATH}/AdError.h \
+    $${INC_PATH}/QmlYandexAdsBanner.h \
+    $${INC_PATH}/QtYandexAdsBannerAndroid.h \
+    $${INC_PATH}/QtYandexAdsBannerInterface.h \
+    $${INC_PATH}/QtYandexAdsManager.h
 
 PLATFORMS_DIR = $$PWD/platform
 
@@ -52,4 +52,5 @@ DISTFILES += \
     platform/android/gradlew \
     platform/android/gradlew.bat \
     platform/android/res/values/libs.xml \
-    platform/android/src/org/test/QtYandexAds/QtYandexAdsActivity.java
+    platform/android/src/org/test/QtYandexAds/QtYandexAdsActivity.java \
+    platform/android/src/org/test/QtYandexAds/QtYandexAdsBanner.java

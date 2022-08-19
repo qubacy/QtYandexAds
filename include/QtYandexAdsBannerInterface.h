@@ -31,7 +31,7 @@ public:
     explicit QtYandexAdsBannerInterface(QObject *parent = nullptr);
     virtual ~QtYandexAdsBannerInterface() = default;
     
-    virtual bool initialize() = 0;
+//    virtual bool initialize() = 0;
     
     virtual bool setUnitId(const QString& unitId);
     virtual const QString& unitId() const = 0;

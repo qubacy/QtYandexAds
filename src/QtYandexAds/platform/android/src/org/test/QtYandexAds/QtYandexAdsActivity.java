@@ -1,12 +1,5 @@
 package org.test.QtYandexAds;
 
-import com.yandex.mobile.ads.common.AdRequest;
-import com.yandex.mobile.ads.common.AdRequestError;
-import com.yandex.mobile.ads.common.ImpressionData;
-import com.yandex.mobile.ads.banner.AdSize;
-import com.yandex.mobile.ads.banner.BannerAdView;
-import com.yandex.mobile.ads.banner.BannerAdEventListener;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -18,288 +11,257 @@ import org.qtproject.qt5.android.bindings.QtApplication;
 import java.util.ArrayList;
 import android.widget.FrameLayout;
 
+import com.yandex.mobile.ads.common.InitializationListener;
+import com.yandex.mobile.ads.common.MobileAds;
+import com.yandex.mobile.ads.instream.MobileInstreamAds;
+import com.yandex.mobile.ads.banner.AdSize;
+import com.yandex.mobile.ads.banner.BannerAdEventListener;
+import com.yandex.mobile.ads.banner.BannerAdView;
+import com.yandex.mobile.ads.common.AdRequest;
+import com.yandex.mobile.ads.common.AdRequestError;
+import com.yandex.mobile.ads.common.ImpressionData;
+
 public class QtYandexAdsActivity extends QtActivity {
-    private int m_Id;
-    
-    private ViewGroup m_ViewGroup;
+    private static final String  YANDEX_MOBILE_ADS_TAG                = "YandexMobileAds";
+    private static final boolean INSTREAM_AD_GROUP_PRELOADING_ENABLED = true;
 
-    private BannerAdView m_BannerAdView = null;
+    private String m_BannerAdUnitId = "R-M-DEMO-320x50";
 
-    private boolean m_IsAdBannerShowed = false;
-    private boolean m_IsAdBannerLoaded = false;
+    private ArrayList<QtYandexAdsBanner> m_BannerList;
 
-//    private ArrayList<String> m_TestDevices = new ArrayList<String>();
+    private static QtYandexAdsActivity m_Instance;
 
-    private int m_AdBannerWidth = 0;
-    private int m_AdBannerHeight = 0;
-    private int m_StatusBarHeight = 0;
+    public static void CreateInstance() {
+        if (m_Instance == null)
+            m_Instance = new QtYandexAdsActivity();
+    }
 
-    private int m_ReadyToRequest = 0x00;
-    
-    public int GetBannerId() {
-        return m_Id;
+    public static int CreateNewBanner(int bannerId) {
+        if (bannerId < 0)       return -1;
+        if (m_Instance == null) return -1;
+
+        m_Instance.m_BannerList.add(bannerId, new QtYandexAdsBanner(m_Instance, bannerId));
+
+        QtYandexAdsBanner newBanner = m_Instance.m_BannerList.get(bannerId);
+
+        // new banner layout setup:
+
+        if (!m_Instance.SetupBannerLayout(newBanner)) {
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+
+            return -1;
+        }
+
+        return bannerId;
+    }
+
+    public static void DeleteBanner(int bannerId) {
+        if (m_Instance == null) return;
+        if (bannerId < 0 || m_Instance.m_BannerList.size() <= bannerId)
+            return;
+
+        m_Instance.m_BannerList.remove(bannerId);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        MobileInstreamAds.setAdGroupPreloading(INSTREAM_AD_GROUP_PRELOADING_ENABLED);
+
+        MobileAds.initialize(this, new InitializationListener() {
+            @Override
+            public void onInitializationCompleted() {
+                Log.d(YANDEX_MOBILE_ADS_TAG, "SDK initialized");
+            }
+        });
     }
 
     private int GetStatusBarHeight() {
         Rect rectangle = new Rect();
-        Window window = getWindow();
+        View decorView = GetMainDecorView();
 
-        window.getDecorView().getWindowVisibleDisplayFrame(rectangle);
+        if (decorView == null) return -1;
+
+        decorView.getWindowVisibleDisplayFrame(rectangle);
 
         int statusBarHeight = rectangle.top;
-        int contentViewTop  = window.findViewById(Window.ID_ANDROID_CONTENT).getTop();
+        int contentViewTop  = getWindow().findViewById(Window.ID_ANDROID_CONTENT).getTop();
         int titleBarHeight  = contentViewTop - statusBarHeight;
 
         return titleBarHeight;
     }
 
-    public void SetAdBannerUnitId(final String adId) {
-        runOnUiThread(new Runnable() {
-            public void run() {
-                m_BannerAdView.setAdUnitId(adId);
+    private View GetMainDecorView() {
+        // Qt thing to work with (instead of simple layout creation);
 
-                m_ReadyToRequest |= 0x01;
+        Window mainWindow = getWindow();
 
-                if (m_ReadyToRequest == 0x03 && !IsAdBannerLoaded())
-                    RequestBanner();
-            }
-        });
+        if (mainWindow == null) return null;
+
+        return mainWindow.getDecorView();
     }
 
-    public void SetAdBannerSize(final int size) {
-        final QtYandexAdsActivity self = this;
+    private boolean SetupBannerLayout(QtYandexAdsBanner banner) {
+        if (banner == null) return false;
 
-        runOnUiThread(new Runnable() {
-            public void run() {
-                AdSize adSize = AdSize.BANNER_320x50;
-                
-                // FIXME: decide banner ENUM storing issue
+        // layout setup:
 
-                switch (size) {
-                    case 1: { adSize = AdSize.BANNER_320x50;  break; }
-                    case 2: { adSize = AdSize.BANNER_320x100; break; }
-                    case 3: { adSize = AdSize.BANNER_400x240; break; }
-                    case 4: { adSize = AdSize.BANNER_728x90;  break; }
-                    case 5: { adSize = AdSize.FULL_SCREEN;    break; }
-                };
+        View decorView = GetMainDecorView();
 
-                m_BannerAdView.setAdSize(adSize);
+        if (decorView == null) {
+            // FIXME: AdRequestError.Code should be replaced
 
-                m_AdBannerWidth  = adSize.getWidthInPixels(self);
-                m_AdBannerHeight = adSize.getHeightInPixels(self);
+            onBannerLoadFail(banner.GetBannerId(), AdRequestError.Code.SYSTEM_ERROR);
 
-                m_ReadyToRequest |= 0x02;
+            return false;
+        }
 
-                if (m_ReadyToRequest == 0x03 && !IsAdBannerLoaded())
-                    RequestBanner();
-            }
-        });
+        View rootView = decorView.getRootView();
+
+        if (rootView == null) return false;
+
+        if (rootView instanceof ViewGroup) {
+            int statusBarHeight = GetStatusBarHeight();
+
+            if (statusBarHeight < 0) return false;
+
+            banner.SetAdBannerPosition(QtYandexAdsBanner.DEFAULT_AD_BANNER_X, statusBarHeight);
+
+            ((ViewGroup) rootView).addView(banner.GetBannerView());
+
+            banner.ShowAdBanner();
+
+        } else {
+            // layout error processing:
+
+            return false;
+        }
+
+        // android layout setup:
+
+//        ConstraintLayout mainLayout = new ConstraintLayout(this);
+//
+//        ConstraintLayout.LayoutParams bannerLayoutParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT,
+//                ConstraintLayout.LayoutParams.WRAP_CONTENT);
+//
+//        bannerLayoutParams.topToTop = ConstraintLayout.LayoutParams.PARENT_ID;
+//        bannerLayoutParams.baselineToBaseline = ConstraintLayout.LayoutParams.PARENT_ID;
+//
+//        m_Banner.setLayoutParams(bannerLayoutParams);
+//        mainLayout.addView(m_Banner);
+//
+//        setContentView(mainLayout);
+
+        return true;
     }
 
-    public void SetAdBannerPosition(final int x, final int y) {
-        runOnUiThread(new Runnable() {
-            public void run() {
-                FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,
-                                                                                     FrameLayout.LayoutParams.WRAP_CONTENT);
-                m_BannerAdView.setLayoutParams(layoutParams);
+    private static QtYandexAdsBanner GetAdBannerById(final int bannerId) {
+        if (m_Instance == null) return null;
+        if (m_Instance.m_BannerList.size() <= bannerId || bannerId < 0) return null;
 
-                m_BannerAdView.setX(x);
-                m_BannerAdView.setY(y);
-            }
-        });
+        return m_Instance.m_BannerList.get(bannerId);
     }
 
-//    public void AddAdTestDevice(final String deviceId) {
-//        runOnUiThread(new Runnable() {
-//            public void run() {
-//                m_TestDevices.add(deviceId);
-//            }
-//        });
-//    }
+    public static void SetAdBannerUnitId(final String adId) {
+        if (m_Instance == null || adId.length() <= 0) return;
 
-    public boolean IsAdBannerShowed() {
-        return m_IsAdBannerShowed && m_IsAdBannerLoaded;
+        m_Instance.m_BannerAdUnitId = adId;
+
+        for (int i = 0; i < m_Instance.m_BannerList.size(); ++i) {
+            QtYandexAdsBanner curBanner = m_Instance.m_BannerList.get(i);
+
+            if (curBanner == null) return;
+
+            curBanner.ProcessNewAdBannerUnitId();
+        }
     }
 
-    public boolean IsAdBannerLoaded() {
-        return m_IsAdBannerLoaded;
+    public static String GetBannerAdUnitId() {
+        if (m_Instance == null) return "";
+
+        return m_Instance.m_BannerAdUnitId;
     }
 
-    public int GetAdBannerWidth()
-    {
-        return m_AdBannerWidth;
+    public static void SetAdBannerSize(final int bannerId, final int size) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
+
+        if (curBanner == null) return;
+
+        if (!curBanner.SetAdBannerSize(size)) {
+            // FIXME: HANDLE ERROR CASE
+        }
     }
 
-    public int GetAdBannerHeight()
-    {
-        return m_AdBannerHeight;
+    public static void SetAdBannerPosition(final int bannerId, final int x, final int y) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
+
+        if (curBanner == null) return;
+
+        if (!curBanner.SetAdBannerPosition(x, y)) {
+            // FIXME: HANDLE ERROR CASE
+        }
     }
 
-    public void ShowAdBanner() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (IsAdBannerShowed()) return;
+    public static boolean IsAdBannerLoaded(final int bannerId) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
 
-                if (m_ReadyToRequest == 0x03 && !IsAdBannerLoaded())
-                    RequestBanner();
+        if (curBanner == null) return false;
 
-                m_BannerAdView.setVisibility(View.VISIBLE);
-                m_IsAdBannerShowed = true;
-            }
-        });
+        return curBanner.IsAdBannerLoaded();
     }
 
-    private void RequestBanner() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                onBannerLoading();
+    public static boolean IsAdBannerVisible(final int bannerId) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
 
-                final AdRequest adRequest = new AdRequest.Builder().build();
+        if (curBanner == null) return false;
 
-                m_BannerAdView.loadAd(adRequest);
-            }
-        });
+        return curBanner.IsAdBannerVisible();
     }
 
-    public void HideAdBanner() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (!IsAdBannerShowed()) return;
+    public static int GetAdBannerWidth(final int bannerId) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
 
-                m_BannerAdView.setVisibility(View.GONE);
+        if (curBanner == null) return -1;
 
-                m_IsAdBannerShowed = false;
-            }
-        });
+        return curBanner.GetAdBannerWidth();
     }
 
-    public void InitializeAdBanner(int bannerId) {
-        final QtYandexAdsActivity self = this;
-        
-        if (bannerId < 0) return;
+    public static int GetAdBannerHeight(final int bannerId) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
 
-        runOnUiThread(new Runnable() {
-            public void run() {
-                if (m_BannerAdView != null) return;
-                
-                m_Id              = bannerId;
-                m_StatusBarHeight = GetStatusBarHeight();
+        if (curBanner == null) return -1;
 
-                m_BannerAdView = new BannerAdView(self);
-
-                m_BannerAdView.setAdSize(AdSize.BANNER_320x50); // FIXME: move to consts
-                m_BannerAdView.setVisibility(View.GONE);
-
-                View view = getWindow().getDecorView().getRootView();
-
-                if (view instanceof ViewGroup) {
-                    m_ViewGroup = (ViewGroup) view;
-
-                    FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,
-                            FrameLayout.LayoutParams.WRAP_CONTENT);
-
-                    m_BannerAdView.setLayoutParams(layoutParams);
-                    m_BannerAdView.setX(0);
-                    m_BannerAdView.setY(m_StatusBarHeight);
-
-                    m_ViewGroup.addView(m_BannerAdView);
-
-                    m_BannerAdView.setBannerAdEventListener(new BannerAdEventListener() {
-                        @Override
-                        public void onAdLoaded() {
-                            m_IsAdBannerLoaded = true;
-
-                            onBannerLoaded();
-                        }
-                    
-                        @Override
-                        public void onAdFailedToLoad(AdRequestError adRequestError) {
-                            m_IsAdBannerLoaded = false;
-                            
-                            onBannedLoadFail(adRequestError.getCode());
-                        }
-                    
-                        @Override
-                        public void onAdClicked() {
-                            onBannerClicked();
-                        }
-                    
-                        @Override
-                        public void onLeftApplication() {
-                            ShutdownAdBanner();
-                        }
-                    
-                        @Override
-                        public void onImpression(ImpressionData impressionData) {
-                            // FIXME: define it
-                            
-                            onBannerImpression(impressionData.getRawData());
-                        }
-                    
-                       @Override
-                       public void onReturnedToApplication() {
-                           // FIXME: define it
-                           
-                           ShowAdBanner();
-                       }
-                    });
-                }
-            }
-        });
+        return curBanner.GetAdBannerHeight();
     }
 
-    public void ShutdownAdBanner()
-    {
-        runOnUiThread(new Runnable() {
-            public void run() {
-                if (m_BannerAdView == null) return;
+    public static void ShutdownAdBanner(final int bannerId) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
 
-                m_ViewGroup.removeView(m_BannerAdView);
+        if (curBanner == null) return;
 
-                m_IsAdBannerShowed = false;
-                m_BannerAdView     = null;
-            }
-        });
+        curBanner.ShutdownAdBanner();
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public static void ShowAdBanner(final int bannerId) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
+
+        if (curBanner == null) return;
+
+        curBanner.ShowAdBanner();
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        
-        // FIXME: does it matter?
-        
-//        if (m_BannerAdView != null)
-//            m_BannerAdView.pause();
-    }
-    @Override
-    public void onResume() {
-        super.onResume();
-        
-        // FIXME: does it matter?
-        
-//        if (m_BannerAdView != null)
-//            m_BannerAdView.resume();
-    }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        
-        if (m_BannerAdView != null)
-            m_BannerAdView.destroy();
+    public static void HideAdBanner(final int bannerId) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
+
+        if (curBanner == null) return;
+
+        curBanner.HideAdBanner();
     }
 
-    private static native void onBannerLoaded();
-    private static native void onBannerLoading();
-    private static native void onBannerClosed();
-    private static native void onBannerClicked();
-    private static native void onBannedLoadFail(int errorCode);
-    private static native void onBannerImpression(String rawImpressionJsonData);
+    public static native void onBannerLoaded(int bannerId);
+    public static native void onBannerLoading(int bannerId);
+    public static native void onBannerClicked(int bannerId);
+    public static native void onBannerLoadFail(int bannerId, int errorCode);
+//    private static native void onBannerImpression(String rawImpressionJsonData);
 }
