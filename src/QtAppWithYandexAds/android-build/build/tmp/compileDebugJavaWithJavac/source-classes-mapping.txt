@@ -1,0 +1,42 @@
+org/kde/necessitas/ministro/IMinistro.java
+ org.kde.necessitas.ministro.IMinistro
+ org.kde.necessitas.ministro.IMinistro$Default
+ org.kde.necessitas.ministro.IMinistro$Stub
+ org.kde.necessitas.ministro.IMinistro$Stub$Proxy
+org/qtproject/qt5/android/bindings/QtLoader.java
+ org.qtproject.qt5.android.bindings.QtLoader
+ org.qtproject.qt5.android.bindings.QtLoader$1
+ org.qtproject.qt5.android.bindings.QtLoader$2
+ org.qtproject.qt5.android.bindings.QtLoader$3
+ org.qtproject.qt5.android.bindings.QtLoader$3$1
+ org.qtproject.qt5.android.bindings.QtLoader$3$1$1
+ org.qtproject.qt5.android.bindings.QtLoader$4
+org/qtproject/qt5/android/bindings/QtActivity.java
+ org.qtproject.qt5.android.bindings.QtActivity
+org/test/QtYandexAds/QtYandexAdsBanner.java
+ org.test.QtYandexAds.QtYandexAdsBanner
+ org.test.QtYandexAds.QtYandexAdsBanner$1
+ org.test.QtYandexAds.QtYandexAdsBanner$2
+org/qtproject/qt5/android/bindings/QtActivityLoader.java
+ org.qtproject.qt5.android.bindings.QtActivityLoader
+ org.qtproject.qt5.android.bindings.QtActivityLoader$1
+ org.qtproject.qt5.android.bindings.QtActivityLoader$2
+org/test/qtyandexads/BuildConfig.java
+ org.test.qtyandexads.BuildConfig
+org/qtproject/qt5/android/bindings/QtService.java
+ org.qtproject.qt5.android.bindings.QtService
+org/qtproject/qt5/android/bindings/QtApplication.java
+ org.qtproject.qt5.android.bindings.QtApplication
+ org.qtproject.qt5.android.bindings.QtApplication$InvokeResult
+org/kde/necessitas/ministro/IMinistroCallback.java
+ org.kde.necessitas.ministro.IMinistroCallback
+ org.kde.necessitas.ministro.IMinistroCallback$Default
+ org.kde.necessitas.ministro.IMinistroCallback$Stub
+ org.kde.necessitas.ministro.IMinistroCallback$Stub$Proxy
+org/test/QtYandexAds/QtYandexAdsActivity.java
+ org.test.QtYandexAds.QtYandexAdsActivity
+ org.test.QtYandexAds.QtYandexAdsActivity$1
+ org.test.QtYandexAds.QtYandexAdsActivity$2
+ org.test.QtYandexAds.QtYandexAdsActivity$3
+org/qtproject/qt5/android/bindings/QtServiceLoader.java
+ org.qtproject.qt5.android.bindings.QtServiceLoader

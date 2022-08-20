@@ -1,0 +1,676 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.test.qtyandexads"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="21"
+9-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+10        android:targetSdkVersion="28" />
+10-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+11    <!--
+12         The following comment will be replaced upon deployment with default permissions based on the dependencies of the application.
+13         Remove the comment if you do not require these default permissions.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:5:5-67
+15-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:5:22-64
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:6:5-81
+16-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:6:22-78
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:7:5-79
+17-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:7:22-76
+18
+19    <!--
+20         The following comment will be replaced upon deployment with default features based on the dependencies of the application.
+21         Remove the comment if you do not require these default features.
+22    -->
+23
+24    <supports-screens
+24-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:5-135
+25        android:anyDensity="true"
+25-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:80-105
+26        android:largeScreens="true"
+26-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:23-50
+27        android:normalScreens="true"
+27-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:51-79
+28        android:smallScreens="true" />
+28-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:106-133
+29
+30    <uses-permission android:name="android.permission.INTERNET" />
+30-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:5:5-67
+30-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:5:22-64
+31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+31-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:7:5-79
+31-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:7:22-76
+32    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+32-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:17:5-80
+32-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:17:22-78
+33    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+33-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:6:5-81
+33-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:6:22-78
+34    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+34-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:19:5-78
+34-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:19:22-76
+35    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+35-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:22:5-76
+35-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:22:22-73
+36
+37    <queries>
+37-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:24:5-40:15
+38        <intent>
+38-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:25:9-27:18
+39            <action android:name="android.intent.action.VIEW" />
+39-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:26:13-65
+39-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:26:21-62
+40        </intent>
+41        <intent>
+41-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:28:9-30:18
+42            <action android:name="android.intent.action.SENDTO" />
+42-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:29:13-67
+42-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:29:21-64
+43        </intent>
+44        <intent>
+44-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:31:9-33:18
+45            <action android:name="android.intent.action.SEND" />
+45-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:32:13-65
+45-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:32:21-62
+46        </intent>
+47        <intent>
+47-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:34:9-36:18
+48            <action android:name="android.intent.action.DIAL" />
+48-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:35:13-65
+48-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:35:21-62
+49        </intent>
+50        <intent>
+50-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:37:9-39:18
+51            <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />
+51-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:38:13-84
+51-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:38:21-81
+52        </intent>
+53        <!-- For browser content -->
+54        <intent>
+54-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:31:9-37:18
+55            <action android:name="android.intent.action.VIEW" />
+55-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:26:13-65
+55-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:26:21-62
+56
+57            <category android:name="android.intent.category.BROWSABLE" />
+57-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:34:13-74
+57-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:34:23-71
+58
+59            <data android:scheme="https" />
+59-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:38:17-50
+59-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:38:23-47
+60        </intent> <!-- End of browser content -->
+61        <!-- For CustomTabsService -->
+62        <intent>
+62-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:40:9-42:18
+63            <action android:name="android.support.customtabs.action.CustomTabsService" />
+63-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:41:13-90
+63-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:41:21-87
+64        </intent>
+65    </queries>
+66
+67    <uses-permission android:name="android.permission.WAKE_LOCK" />
+67-->[com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:25:5-68
+67-->[com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:25:22-65
+68    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+68-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:27:5-81
+68-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:27:22-78
+69    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+69-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:28:5-77
+69-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:28:22-74
+70    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+70-->[com.android.installreferrer:installreferrer:2.2] C:\Users\MCDead\.gradle\caches\transforms-3\41bf1a95269ebac97ce792a43d0edc61\transformed\installreferrer-2.2\AndroidManifest.xml:9:5-110
+70-->[com.android.installreferrer:installreferrer:2.2] C:\Users\MCDead\.gradle\caches\transforms-3\41bf1a95269ebac97ce792a43d0edc61\transformed\installreferrer-2.2\AndroidManifest.xml:9:22-107
+71
+72    <application
+72-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:5-83:19
+73        android:name="org.qtproject.qt5.android.bindings.QtApplication"
+73-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:53-116
+74        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+74-->[androidx.core:core:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\107b48ead489d4dd0a48badb09d9592d\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+75        android:debuggable="true"
+76        android:extractNativeLibs="true"
+76-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:152-184
+77        android:hardwareAccelerated="true"
+77-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:18-52
+78        android:label="QtAppWithYandexAds" >
+78-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:117-151
+79        <activity
+79-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:9-80:20
+80            android:name="org.test.QtYandexAds.QtYandexAdsActivity"
+80-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:189-244
+81            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
+81-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:19-188
+82            android:label="QtAppWithYandexAds"
+82-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:245-279
+83            android:launchMode="singleTop"
+83-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:320-350
+84            android:screenOrientation="unspecified" >
+84-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:280-319
+85            <intent-filter>
+85-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:23:13-26:29
+86                <action android:name="android.intent.action.MAIN" />
+86-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:24:17-68
+86-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:24:25-66
+87
+88                <category android:name="android.intent.category.LAUNCHER" />
+88-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:25:17-76
+88-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:25:27-74
+89            </intent-filter>
+90            <!-- Application arguments -->
+91            <!-- meta-data android:name="android.app.arguments" android:value="arg1 arg2 arg3"/ -->
+92            <!-- Application arguments -->
+93            <meta-data
+93-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:30:13-96
+94                android:name="android.app.lib_name"
+94-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:30:24-59
+95                android:value="QtAppWithYandexAds" />
+95-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:30:60-94
+96            <meta-data
+96-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:31:13-112
+97                android:name="android.app.qt_sources_resource_id"
+97-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:31:24-73
+98                android:resource="@array/qt_sources" />
+98-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:31:74-110
+99            <meta-data
+99-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:32:13-87
+100                android:name="android.app.repository"
+100-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:32:24-61
+101                android:value="default" />
+101-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:32:62-85
+102            <meta-data
+102-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:33:13-106
+103                android:name="android.app.qt_libs_resource_id"
+103-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:33:24-70
+104                android:resource="@array/qt_libs" />
+104-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:33:71-104
+105            <meta-data
+105-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:34:13-116
+106                android:name="android.app.bundled_libs_resource_id"
+106-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:34:24-75
+107                android:resource="@array/bundled_libs" />
+107-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:34:76-114
+108            <!-- Deploy Qt libs as part of package -->
+109            <meta-data
+109-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:36:13-91
+110                android:name="android.app.bundle_local_qt_libs"
+110-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:36:24-71
+111                android:value="1" />
+111-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:36:72-89
+112            <!-- Run with local libs -->
+113            <meta-data
+113-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:38:13-88
+114                android:name="android.app.use_local_qt_libs"
+114-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:38:24-68
+115                android:value="1" />
+115-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:38:69-86
+116            <meta-data
+116-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:39:13-100
+117                android:name="android.app.libs_prefix"
+117-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:39:24-62
+118                android:value="/data/local/tmp/qt/" />
+118-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:39:63-98
+119            <meta-data
+119-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:40:13-122
+120                android:name="android.app.load_local_libs_resource_id"
+120-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:40:24-78
+121                android:resource="@array/load_local_libs" />
+121-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:40:79-120
+122            <meta-data
+122-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:41:13-150
+123                android:name="android.app.load_local_jars"
+123-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:41:24-66
+124                android:value="jar/QtAndroid.jar:jar/QtAndroidExtras.jar:jar/QtAndroidBearer.jar" />
+124-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:41:67-148
+125            <meta-data
+125-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:42:13-89
+126                android:name="android.app.static_init_classes"
+126-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:42:24-70
+127                android:value="" />
+127-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:42:71-87
+128            <!-- Used to specify custom system library path to run with local system libs -->
+129            <!-- <meta-data android:name="android.app.system_libs_prefix" android:value="/system/lib/"/> -->
+130            <!-- Messages maps -->
+131            <meta-data
+131-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:46:13-122
+132                android:name="android.app.ministro_not_found_msg"
+132-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:46:71-120
+133                android:value="@string/ministro_not_found_msg" />
+133-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:46:24-70
+134            <meta-data
+134-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:47:13-116
+135                android:name="android.app.ministro_needed_msg"
+135-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:47:68-114
+136                android:value="@string/ministro_needed_msg" />
+136-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:47:24-67
+137            <meta-data
+137-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:48:13-108
+138                android:name="android.app.fatal_error_msg"
+138-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:48:64-106
+139                android:value="@string/fatal_error_msg" />
+139-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:48:24-63
+140            <meta-data
+140-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:49:13-132
+141                android:name="android.app.unsupported_android_version"
+141-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:49:76-130
+142                android:value="@string/unsupported_android_version" />
+142-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:49:24-75
+143            <!-- Messages maps -->
+144            <!-- Splash screen -->
+145            <!--
+146                 Orientation-specific (portrait/landscape) data is checked first. If not available for current orientation,
+147                 then android.app.splash_screen_drawable. For best results, use together with splash_screen_sticky and
+148                 use hideSplashScreen() with a fade-out animation from Qt Android Extras to hide the splash screen when you
+149                 are done populating your window with content.
+150            -->
+151            <!-- meta-data android:name="android.app.splash_screen_drawable_portrait" android:resource="@drawable/logo_portrait" / -->
+152            <!-- meta-data android:name="android.app.splash_screen_drawable_landscape" android:resource="@drawable/logo_landscape" / -->
+153            <!-- meta-data android:name="android.app.splash_screen_drawable" android:resource="@drawable/logo"/ -->
+154            <!-- meta-data android:name="android.app.splash_screen_sticky" android:value="true"/ -->
+155            <!-- Splash screen -->
+156            <!-- Background running -->
+157            <!--
+158                 Warning: changing this value to true may cause unexpected crashes if the
+159                          application still try to draw after
+160                          "applicationStateChanged(Qt::ApplicationSuspended)"
+161                          signal is sent!
+162            -->
+163            <meta-data
+163-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:66:13-93
+164                android:name="android.app.background_running"
+164-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:66:24-69
+165                android:value="false" />
+165-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:66:70-91
+166            <!-- Background running -->
+167            <!-- auto screen scale factor -->
+168            <meta-data
+168-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:69:13-99
+169                android:name="android.app.auto_screen_scale_factor"
+169-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:69:24-75
+170                android:value="false" />
+170-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:69:76-97
+171            <!-- auto screen scale factor -->
+172            <!-- extract android style -->
+173            <!--
+174                 available android:values :
+175                * default - In most cases this will be the same as "full", but it can also be something else if needed, e.g., for compatibility reasons
+176                * full - useful QWidget & Quick Controls 1 apps
+177                * minimal - useful for Quick Controls 2 apps, it is much faster than "full"
+178                * none - useful for apps that don't use any of the above Qt modules
+179            -->
+180            <meta-data
+180-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:78:13-98
+181                android:name="android.app.extract_android_style"
+181-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:78:24-72
+182                android:value="default" />
+182-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:78:73-96
+183            <!-- extract android style -->
+184        </activity>
+185
+186        <meta-data
+186-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:81:9-133
+187            android:name="com.google.android.gms.ads.APPLICATION_ID"
+187-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:81:20-76
+188            android:value="ca-app-pub-3940256099942544~3347511713" />
+188-->C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:81:77-131
+189        <!-- For adding service(s) please check: https://wiki.qt.io/AndroidServices -->
+190        <activity
+190-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:43:9-46:75
+191            android:name="com.yandex.mobile.ads.common.AdActivity"
+191-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:44:13-67
+192            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+192-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:45:13-122
+193            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+193-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:46:13-72
+194
+195        <provider
+195-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:48:9-51:40
+196            android:name="com.yandex.mobile.ads.core.initializer.MobileAdsInitializeProvider"
+196-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:49:13-94
+197            android:authorities="org.test.qtyandexads.MobileAdsInitializeProvider"
+197-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:50:13-79
+198            android:exported="false" /> <!-- Yandex Mobile Metrica Analytics: common service -->
+198-->[com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:51:13-37
+199        <service
+199-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:28:9-44:19
+200            android:name="com.yandex.metrica.MetricaService"
+200-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:29:13-61
+201            android:enabled="true"
+201-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:30:13-35
+202            android:exported="false"
+202-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:31:13-37
+203            android:process=":Metrica" >
+203-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:32:13-39
+204            <intent-filter>
+204-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:33:13-39:29
+205                <category android:name="android.intent.category.DEFAULT" />
+205-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:34:17-76
+205-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:34:27-73
+206
+207                <action android:name="com.yandex.metrica.IMetricaService" />
+207-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:36:17-77
+207-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:36:25-74
+208
+209                <data android:scheme="metrica" />
+209-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:38:17-50
+209-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:38:23-47
+210            </intent-filter>
+211
+212            <meta-data
+212-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:41:13-43:39
+213                android:name="metrica:api:level"
+213-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:42:17-49
+214                android:value="105" />
+214-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:43:17-36
+215        </service>
+216        <service
+216-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:45:9-59:19
+217            android:name="com.yandex.metrica.ConfigurationService"
+217-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:46:13-67
+218            android:enabled="true"
+218-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:47:13-35
+219            android:exported="false"
+219-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:48:13-37
+220            android:process=":Metrica" >
+220-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:49:13-39
+221            <meta-data
+221-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:50:13-52:37
+222                android:name="metrica:configuration:api:level"
+222-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:51:17-63
+223                android:value="3" />
+223-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:52:17-34
+224
+225            <intent-filter>
+225-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:54:13-58:29
+226
+227                <!-- <action android:name="com.yandex.metrica.configuration.ACTION_START"/> -->
+228                <action android:name="com.yandex.metrica.configuration.ACTION_INIT" />
+228-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:57:17-87
+228-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:57:25-84
+229            </intent-filter>
+230        </service>
+231        <service
+231-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:60:9-66:19
+232            android:name="com.yandex.metrica.ConfigurationJobService"
+232-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:61:13-70
+233            android:enabled="true"
+233-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:62:13-35
+234            android:exported="false"
+234-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:63:13-37
+235            android:permission="android.permission.BIND_JOB_SERVICE"
+235-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:64:13-69
+236            android:process=":Metrica" >
+236-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:65:13-39
+237        </service> <!-- To track preinstallations -->
+238        <provider
+238-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:69:9-75:54
+239            android:name="com.yandex.metrica.PreloadInfoContentProvider"
+239-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:70:13-73
+240            android:authorities="org.test.qtyandexads.appmetrica.preloadinfo.retail"
+240-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:71:13-81
+241            android:enabled="true"
+241-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:72:13-35
+242            android:exported="true"
+242-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:73:13-36
+243            android:process=":Metrica" />
+243-->[com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:74:13-39
+244
+245        <activity
+245-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+246            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+246-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+247            android:exported="false"
+247-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+248            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+248-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+249        <activity
+249-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:49:9-53:64
+250            android:name="com.google.android.gms.ads.AdActivity"
+250-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:50:13-65
+251            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+251-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:51:13-122
+252            android:exported="false"
+252-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:52:13-37
+253            android:theme="@android:style/Theme.Translucent" />
+253-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:53:13-61
+254
+255        <provider
+255-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:55:9-59:39
+256            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+256-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:56:13-76
+257            android:authorities="org.test.qtyandexads.mobileadsinitprovider"
+257-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:57:13-73
+258            android:exported="false"
+258-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:58:13-37
+259            android:initOrder="100" />
+259-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:59:13-36
+260
+261        <service
+261-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:61:9-64:40
+262            android:name="com.google.android.gms.ads.AdService"
+262-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:62:13-64
+263            android:enabled="true"
+263-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:63:13-35
+264            android:exported="false" />
+264-->[com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:64:13-37
+265
+266        <meta-data
+266-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+267            android:name="com.google.android.gms.version"
+267-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+268            android:value="@integer/google_play_services_version" />
+268-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+269
+270        <provider
+270-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:31:9-39:20
+271            android:name="androidx.startup.InitializationProvider"
+271-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:32:13-67
+272            android:authorities="org.test.qtyandexads.androidx-startup"
+272-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:33:13-68
+273            android:exported="false" >
+273-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:34:13-37
+274            <meta-data
+274-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:36:13-38:52
+275                android:name="androidx.work.WorkManagerInitializer"
+275-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:37:17-68
+276                android:value="androidx.startup" />
+276-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:38:17-49
+277        </provider>
+278
+279        <service
+279-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:41:9-46:35
+280            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+280-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:42:13-88
+281            android:directBootAware="false"
+281-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:43:13-44
+282            android:enabled="@bool/enable_system_alarm_service_default"
+282-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:44:13-72
+283            android:exported="false" />
+283-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:45:13-37
+284        <service
+284-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:47:9-53:35
+285            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+285-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:48:13-84
+286            android:directBootAware="false"
+286-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:49:13-44
+287            android:enabled="@bool/enable_system_job_service_default"
+287-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:50:13-70
+288            android:exported="true"
+288-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:51:13-36
+289            android:permission="android.permission.BIND_JOB_SERVICE" />
+289-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:52:13-69
+290        <service
+290-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:54:9-59:35
+291            android:name="androidx.work.impl.foreground.SystemForegroundService"
+291-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:55:13-81
+292            android:directBootAware="false"
+292-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:56:13-44
+293            android:enabled="@bool/enable_system_foreground_service_default"
+293-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:57:13-77
+294            android:exported="false" />
+294-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:58:13-37
+295
+296        <receiver
+296-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:61:9-66:35
+297            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+297-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:62:13-88
+298            android:directBootAware="false"
+298-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:63:13-44
+299            android:enabled="true"
+299-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:64:13-35
+300            android:exported="false" />
+300-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:65:13-37
+301        <receiver
+301-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:67:9-77:20
+302            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+302-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:68:13-106
+303            android:directBootAware="false"
+303-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:69:13-44
+304            android:enabled="false"
+304-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:70:13-36
+305            android:exported="false" >
+305-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:71:13-37
+306            <intent-filter>
+306-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:73:13-76:29
+307                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+307-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:74:17-87
+307-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:74:25-84
+308                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+308-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:75:17-90
+308-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:75:25-87
+309            </intent-filter>
+310        </receiver>
+311        <receiver
+311-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:78:9-88:20
+312            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+312-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:79:13-104
+313            android:directBootAware="false"
+313-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:80:13-44
+314            android:enabled="false"
+314-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:81:13-36
+315            android:exported="false" >
+315-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:82:13-37
+316            <intent-filter>
+316-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:84:13-87:29
+317                <action android:name="android.intent.action.BATTERY_OKAY" />
+317-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:85:17-77
+317-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:85:25-74
+318                <action android:name="android.intent.action.BATTERY_LOW" />
+318-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:86:17-76
+318-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:86:25-73
+319            </intent-filter>
+320        </receiver>
+321        <receiver
+321-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:89:9-99:20
+322            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+322-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:90:13-104
+323            android:directBootAware="false"
+323-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:91:13-44
+324            android:enabled="false"
+324-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:92:13-36
+325            android:exported="false" >
+325-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:93:13-37
+326            <intent-filter>
+326-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:95:13-98:29
+327                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+327-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:96:17-83
+327-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:96:25-80
+328                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+328-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:97:17-82
+328-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:97:25-79
+329            </intent-filter>
+330        </receiver>
+331        <receiver
+331-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:100:9-109:20
+332            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+332-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:101:13-103
+333            android:directBootAware="false"
+333-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:102:13-44
+334            android:enabled="false"
+334-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:103:13-36
+335            android:exported="false" >
+335-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:104:13-37
+336            <intent-filter>
+336-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:106:13-108:29
+337                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+337-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:107:17-79
+337-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:107:25-76
+338            </intent-filter>
+339        </receiver>
+340        <receiver
+340-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:110:9-121:20
+341            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+341-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:111:13-88
+342            android:directBootAware="false"
+342-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:112:13-44
+343            android:enabled="false"
+343-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:113:13-36
+344            android:exported="false" >
+344-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:114:13-37
+345            <intent-filter>
+345-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:116:13-120:29
+346                <action android:name="android.intent.action.BOOT_COMPLETED" />
+346-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:117:17-79
+346-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:117:25-76
+347                <action android:name="android.intent.action.TIME_SET" />
+347-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:118:17-73
+347-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:118:25-70
+348                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+348-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:119:17-81
+348-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:119:25-78
+349            </intent-filter>
+350        </receiver>
+351        <receiver
+351-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:122:9-131:20
+352            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+352-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:123:13-99
+353            android:directBootAware="false"
+353-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:124:13-44
+354            android:enabled="@bool/enable_system_alarm_service_default"
+354-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:125:13-72
+355            android:exported="false" >
+355-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:126:13-37
+356            <intent-filter>
+356-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:128:13-130:29
+357                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+357-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:129:17-98
+357-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:129:25-95
+358            </intent-filter>
+359        </receiver>
+360        <receiver
+360-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:132:9-142:20
+361            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+361-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:133:13-78
+362            android:directBootAware="false"
+362-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:134:13-44
+363            android:enabled="true"
+363-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:135:13-35
+364            android:exported="true"
+364-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:136:13-36
+365            android:permission="android.permission.DUMP" >
+365-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:137:13-57
+366            <intent-filter>
+366-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:139:13-141:29
+367                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+367-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:140:17-88
+367-->[androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:140:25-85
+368            </intent-filter>
+369        </receiver>
+370
+371        <service
+371-->[androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+372            android:name="androidx.room.MultiInstanceInvalidationService"
+372-->[androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+373            android:directBootAware="true"
+373-->[androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+374            android:exported="false" />
+374-->[androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+375    </application>
+376
+377</manifest>

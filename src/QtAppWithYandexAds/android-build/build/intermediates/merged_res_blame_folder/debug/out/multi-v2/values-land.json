@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\MCDead\\Documents\\prog\\QtYandexAds\\src\\QtAppWithYandexAds\\android-build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\4f7fde6443b19e6ece3941e32d79f216\\transformed\\appcompat-1.2.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\cfc12a0bc87637f6e0c8439ca7255a75\\transformed\\mobileads-5.2.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "270"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "264",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "479"
+                    }
+                }
+            ]
+        }
+    ]
+}

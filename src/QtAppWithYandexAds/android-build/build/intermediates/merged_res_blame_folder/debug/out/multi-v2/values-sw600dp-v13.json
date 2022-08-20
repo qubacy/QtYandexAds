@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\MCDead\\Documents\\prog\\QtYandexAds\\src\\QtAppWithYandexAds\\android-build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\4f7fde6443b19e6ece3941e32d79f216\\transformed\\appcompat-1.2.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\cfc12a0bc87637f6e0c8439ca7255a75\\transformed\\mobileads-5.2.0\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "251"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "611",
+                        "endLines": "13",
+                        "endColumns": "12",
+                        "endOffsets": "807"
+                    }
+                }
+            ]
+        }
+    ]
+}

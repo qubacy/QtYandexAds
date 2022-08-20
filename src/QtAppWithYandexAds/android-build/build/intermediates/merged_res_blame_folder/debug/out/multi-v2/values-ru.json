@@ -1,0 +1,128 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\MCDead\\Documents\\prog\\QtYandexAds\\src\\QtAppWithYandexAds\\android-build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ru\\values-ru.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\9c470cce5793a7ef2fc01545b53406f1\\transformed\\play-services-basement-18.0.0\\res\\values-ru\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "152",
+                        "endOffsets": "347"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3821",
+                        "endColumns": "156",
+                        "endOffsets": "3973"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\cfc12a0bc87637f6e0c8439ca7255a75\\transformed\\mobileads-5.2.0\\res\\values-ru\\values-ru.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "74",
+                        "endOffsets": "125"
+                    },
+                    "to": {
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "5440",
+                        "endColumns": "74",
+                        "endOffsets": "5510"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\d5ba999664166bb36e9dd832a0fb6f7e\\transformed\\play-services-ads-20.5.0\\res\\values-ru\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "199,292,394,444,572,632,776,864,913,994,1031,1068,1115,1196",
+                        "endColumns": "92,101,49,127,59,143,87,48,80,36,36,46,80,46",
+                        "endOffsets": "291,393,443,571,631,775,863,912,993,1030,1067,1114,1195,1242"
+                    },
+                    "to": {
+                        "startLines": "51,52,53,54,55,56,57,58,59,60,61,62,63,64",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "5515,5612,5718,5772,5904,5968,6116,6208,6261,6346,6387,6428,6479,6564",
+                        "endColumns": "96,105,53,131,63,147,91,52,84,40,40,50,84,50",
+                        "endOffsets": "5607,5713,5767,5899,5963,6111,6203,6256,6341,6382,6423,6474,6559,6610"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\107b48ead489d4dd0a48badb09d9592d\\transformed\\core-1.7.0\\res\\values-ru\\values-ru.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "66",
+                        "startColumns": "4",
+                        "startOffsets": "6697",
+                        "endColumns": "100",
+                        "endOffsets": "6793"
+                    }
+                },
+                {
+                    "source": "C:\\Qt\\5.15.2\\android\\src\\android\\java\\res\\values-ru\\strings.xml",
+                    "from": {
+                        "startLines": "4,3,2,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "285,166,57,405",
+                        "endColumns": "118,117,107,93",
+                        "endOffsets": "399,279,160,494"
+                    },
+                    "to": {
+                        "startLines": "47,48,49,67",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "5095,5214,5332,6798",
+                        "endColumns": "118,117,107,93",
+                        "endOffsets": "5209,5327,5435,6887"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\1b2efced27bbcf31603e4b5591c8209e\\transformed\\play-services-base-18.0.1\\res\\values-ru\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,296,458,580,686,824,949,1060,1160,1337,1440,1599,1721,1884,2038,2103,2159",
+                        "endColumns": "102,161,121,105,137,124,110,99,176,102,158,121,162,153,64,55,81",
+                        "endOffsets": "295,457,579,685,823,948,1059,1159,1336,1439,1598,1720,1883,2037,2102,2158,2240"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2822,2929,3095,3221,3331,3473,3602,3717,3978,4159,4266,4429,4555,4722,4880,4949,5009",
+                        "endColumns": "106,165,125,109,141,128,114,103,180,106,162,125,166,157,68,59,85",
+                        "endOffsets": "2924,3090,3216,3326,3468,3597,3712,3816,4154,4261,4424,4550,4717,4875,4944,5004,5090"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\MCDead\\.gradle\\caches\\transforms-3\\4f7fde6443b19e6ece3941e32d79f216\\transformed\\appcompat-1.2.0\\res\\values-ru\\values-ru.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,220,322,421,507,612,733,812,888,980,1074,1169,1262,1357,1451,1547,1642,1734,1826,1915,2021,2128,2226,2335,2442,2556,2722,2822",
+                        "endColumns": "114,101,98,85,104,120,78,75,91,93,94,92,94,93,95,94,91,91,88,105,106,97,108,106,113,165,99,81",
+                        "endOffsets": "215,317,416,502,607,728,807,883,975,1069,1164,1257,1352,1446,1542,1637,1729,1821,1910,2016,2123,2221,2330,2437,2551,2717,2817,2899"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,65",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,220,322,421,507,612,733,812,888,980,1074,1169,1262,1357,1451,1547,1642,1734,1826,1915,2021,2128,2226,2335,2442,2556,2722,6615",
+                        "endColumns": "114,101,98,85,104,120,78,75,91,93,94,92,94,93,95,94,91,91,88,105,106,97,108,106,113,165,99,81",
+                        "endOffsets": "215,317,416,502,607,728,807,883,975,1069,1164,1257,1352,1446,1542,1637,1729,1821,1910,2016,2123,2221,2330,2437,2551,2717,2817,6692"
+                    }
+                }
+            ]
+        }
+    ]
+}

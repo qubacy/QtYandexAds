@@ -1,12 +1,11 @@
 include( ../../common.pri )
-include( ../../lib.pri )
+#include( ../../lib.pri )
 
 QT     += core gui qml
 
-CONFIG += c++17 staticlib
+CONFIG += c++17
 
-TARGET = QtYandexAds$${LIB_SUFFIX}
-TEMPLATE = lib
+TARGET = QtYandexAds#$${LIB_SUFFIX}
 
 DEFINES += QTYANDEXADS_LIBRARY
 DEFINES += QT_DEPRECATED_WARNINGS
@@ -18,12 +17,11 @@ SOURCES += AdError.cpp \
     QtYandexAdsManager.cpp
 
 HEADERS  += \
-    $${INC_PATH}/QtYandexAds_global.h \
-    $${INC_PATH}/AdError.h \
-    $${INC_PATH}/QmlYandexAdsBanner.h \
-    $${INC_PATH}/QtYandexAdsBannerAndroid.h \
-    $${INC_PATH}/QtYandexAdsBannerInterface.h \
-    $${INC_PATH}/QtYandexAdsManager.h
+    AdError.h \
+    QmlYandexAdsBanner.h \
+    QtYandexAdsBannerAndroid.h \
+    QtYandexAdsBannerInterface.h \
+    QtYandexAdsManager.h
 
 PLATFORMS_DIR = $$PWD/platform
 

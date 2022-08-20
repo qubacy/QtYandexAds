@@ -1,4 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-   src/QtYandexAds
+   src/QtYandexAds \
+   src/QtAppWithYandexAds

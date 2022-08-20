@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.test.qtyandexads"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="28" />
+    <!--
+         The following comment will be replaced upon deployment with default permissions based on the dependencies of the application.
+         Remove the comment if you do not require these default permissions.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--
+         The following comment will be replaced upon deployment with default features based on the dependencies of the application.
+         Remove the comment if you do not require these default features.
+    -->
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />
+        </intent>
+        <!-- For browser content -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent> <!-- End of browser content -->
+        <!-- For CustomTabsService -->
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name="org.qtproject.qt5.android.bindings.QtApplication"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="true"
+        android:hardwareAccelerated="true"
+        android:label="QtAppWithYandexAds" >
+        <activity
+            android:name="org.test.QtYandexAds.QtYandexAdsActivity"
+            android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
+            android:label="QtAppWithYandexAds"
+            android:launchMode="singleTop"
+            android:screenOrientation="unspecified" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Application arguments -->
+            <!-- meta-data android:name="android.app.arguments" android:value="arg1 arg2 arg3"/ -->
+            <!-- Application arguments -->
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="QtAppWithYandexAds" />
+            <meta-data
+                android:name="android.app.qt_sources_resource_id"
+                android:resource="@array/qt_sources" />
+            <meta-data
+                android:name="android.app.repository"
+                android:value="default" />
+            <meta-data
+                android:name="android.app.qt_libs_resource_id"
+                android:resource="@array/qt_libs" />
+            <meta-data
+                android:name="android.app.bundled_libs_resource_id"
+                android:resource="@array/bundled_libs" />
+            <!-- Deploy Qt libs as part of package -->
+            <meta-data
+                android:name="android.app.bundle_local_qt_libs"
+                android:value="1" />
+            <!-- Run with local libs -->
+            <meta-data
+                android:name="android.app.use_local_qt_libs"
+                android:value="1" />
+            <meta-data
+                android:name="android.app.libs_prefix"
+                android:value="/data/local/tmp/qt/" />
+            <meta-data
+                android:name="android.app.load_local_libs_resource_id"
+                android:resource="@array/load_local_libs" />
+            <meta-data
+                android:name="android.app.load_local_jars"
+                android:value="jar/QtAndroid.jar:jar/QtAndroidExtras.jar:jar/QtAndroidBearer.jar" />
+            <meta-data
+                android:name="android.app.static_init_classes"
+                android:value="" />
+            <!-- Used to specify custom system library path to run with local system libs -->
+            <!-- <meta-data android:name="android.app.system_libs_prefix" android:value="/system/lib/"/> -->
+            <!-- Messages maps -->
+            <meta-data
+                android:name="android.app.ministro_not_found_msg"
+                android:value="@string/ministro_not_found_msg" />
+            <meta-data
+                android:name="android.app.ministro_needed_msg"
+                android:value="@string/ministro_needed_msg" />
+            <meta-data
+                android:name="android.app.fatal_error_msg"
+                android:value="@string/fatal_error_msg" />
+            <meta-data
+                android:name="android.app.unsupported_android_version"
+                android:value="@string/unsupported_android_version" />
+            <!-- Messages maps -->
+            <!-- Splash screen -->
+            <!--
+                 Orientation-specific (portrait/landscape) data is checked first. If not available for current orientation,
+                 then android.app.splash_screen_drawable. For best results, use together with splash_screen_sticky and
+                 use hideSplashScreen() with a fade-out animation from Qt Android Extras to hide the splash screen when you
+                 are done populating your window with content.
+            -->
+            <!-- meta-data android:name="android.app.splash_screen_drawable_portrait" android:resource="@drawable/logo_portrait" / -->
+            <!-- meta-data android:name="android.app.splash_screen_drawable_landscape" android:resource="@drawable/logo_landscape" / -->
+            <!-- meta-data android:name="android.app.splash_screen_drawable" android:resource="@drawable/logo"/ -->
+            <!-- meta-data android:name="android.app.splash_screen_sticky" android:value="true"/ -->
+            <!-- Splash screen -->
+            <!-- Background running -->
+            <!--
+                 Warning: changing this value to true may cause unexpected crashes if the
+                          application still try to draw after
+                          "applicationStateChanged(Qt::ApplicationSuspended)"
+                          signal is sent!
+            -->
+            <meta-data
+                android:name="android.app.background_running"
+                android:value="false" />
+            <!-- Background running -->
+            <!-- auto screen scale factor -->
+            <meta-data
+                android:name="android.app.auto_screen_scale_factor"
+                android:value="false" />
+            <!-- auto screen scale factor -->
+            <!-- extract android style -->
+            <!--
+                 available android:values :
+                * default - In most cases this will be the same as "full", but it can also be something else if needed, e.g., for compatibility reasons
+                * full - useful QWidget & Quick Controls 1 apps
+                * minimal - useful for Quick Controls 2 apps, it is much faster than "full"
+                * none - useful for apps that don't use any of the above Qt modules
+            -->
+            <meta-data
+                android:name="android.app.extract_android_style"
+                android:value="default" />
+            <!-- extract android style -->
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <!-- For adding service(s) please check: https://wiki.qt.io/AndroidServices -->
+        <activity
+            android:name="com.yandex.mobile.ads.common.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.yandex.mobile.ads.core.initializer.MobileAdsInitializeProvider"
+            android:authorities="org.test.qtyandexads.MobileAdsInitializeProvider"
+            android:exported="false" /> <!-- Yandex Mobile Metrica Analytics: common service -->
+        <service
+            android:name="com.yandex.metrica.MetricaService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":Metrica" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.yandex.metrica.IMetricaService" />
+
+                <data android:scheme="metrica" />
+            </intent-filter>
+
+            <meta-data
+                android:name="metrica:api:level"
+                android:value="105" />
+        </service>
+        <service
+            android:name="com.yandex.metrica.ConfigurationService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":Metrica" >
+            <meta-data
+                android:name="metrica:configuration:api:level"
+                android:value="3" />
+
+            <intent-filter>
+
+                <!-- <action android:name="com.yandex.metrica.configuration.ACTION_START"/> -->
+                <action android:name="com.yandex.metrica.configuration.ACTION_INIT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.yandex.metrica.ConfigurationJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":Metrica" >
+        </service> <!-- To track preinstallations -->
+        <provider
+            android:name="com.yandex.metrica.PreloadInfoContentProvider"
+            android:authorities="org.test.qtyandexads.appmetrica.preloadinfo.retail"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":Metrica" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <provider
+            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+            android:authorities="org.test.qtyandexads.mobileadsinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <service
+            android:name="com.google.android.gms.ads.AdService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="org.test.qtyandexads.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false" />
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false" />
+
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

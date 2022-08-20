@@ -9,6 +9,13 @@
     <!-- %%INSERT_FEATURES -->
 
     <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
     <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="-- %%INSERT_APP_NAME%% --" android:extractNativeLibs="true">
         <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density" android:name="org.test.QtYandexAds.QtYandexAdsActivity" android:label="-- %%INSERT_APP_NAME%% --" android:screenOrientation="unspecified" android:launchMode="singleTop">
             <intent-filter>
@@ -68,8 +75,8 @@
                 -->
             <meta-data android:name="android.app.extract_android_style" android:value="default"/>
             <!-- extract android style -->
-            <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
         </activity>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
         <!-- For adding service(s) please check: https://wiki.qt.io/AndroidServices -->
     </application>
 

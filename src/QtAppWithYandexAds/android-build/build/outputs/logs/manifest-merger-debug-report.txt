@@ -1,0 +1,885 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:1-85:12
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:1-85:12
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:1-85:12
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:1-85:12
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:10:1-54:12
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:9:1-78:12
+MERGED from [com.yandex.ads.mediation:mobileads-admob:20.5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\a1abdcd41c7ab555614f66dc1a84bcac\transformed\mobileads-admob-20.5.0.1\AndroidManifest.xml:10:1-19:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\68653bf21883c8f561deda403f4d10fb\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\bab720cc7bd2121cbeacf5d088c56a50\transformed\core-ktx-1.7.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\4f7fde6443b19e6ece3941e32d79f216\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\af07ceebc9ddad3887a8cc2866511b22\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\06d232761adef0ba5b5d99fd1a4b3500\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-ads:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\d5ba999664166bb36e9dd832a0fb6f7e\transformed\play-services-ads-20.5.0\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-appset:16.0.2] C:\Users\MCDead\.gradle\caches\transforms-3\118e7b656d576b74ff4ab5d36497ab55\transformed\play-services-appset-16.0.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\c494fb5dd185af11e1876c49c243e7b9\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.yandex.android:mobmetricalib-identifiers:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\6543056099a03e6627ce127f0343053d\transformed\mobmetricalib-identifiers-5.0.1\AndroidManifest.xml:9:1-18:12
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:17:1-67:12
+MERGED from [com.google.android.ump:user-messaging-platform:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\3d4c3cfd6da175307a9d25b406869b41\transformed\user-messaging-platform-1.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\72d88e911131551200dcdf8ebb606116\transformed\play-services-ads-identifier-18.0.1\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-ads-base:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\b7570415ba09ac6da8f391d2d32a7987\transformed\play-services-ads-base-20.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\864753bb4f14e68fa84491b925fd4fb8\transformed\play-services-measurement-base-18.0.3\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\37dd68a38dc2fe0f95c2ba962d982159\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\f4f96b6f64c4e289016b728e9d598190\transformed\appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\840c9dae0598a52eb9dd5bb6b7028feb\transformed\browser-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\913e08ed52afe8f9bdfeff7169cfe857\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\06a90d9743f8212f77a343f46d78c090\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\5b5b966ca59807804aa23da69f0f2cc1\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\5591782a0e4bdcdb9c630a32c203af8f\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\2f558a16ae7effefb4c40445cb99fcf6\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\ab184f952a956d2124517adce3ea9eec\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\3a91b684008f575ae984b8716902e3f7\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\4fb902d840465e2b9805977f1d6b945a\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\325c92f53eda8c8102854a7546350aed\transformed\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf9fef39d4962548a4e4bead6bd316b6\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\34e4afa6bdb61e696bb8f3d82c690a41\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:17:1-145:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\02ba2442eddfc12787d7e8f7834095e1\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\1d5929fdd2dd1eb6526d78cff549db56\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\107b48ead489d4dd0a48badb09d9592d\transformed\core-1.7.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\MCDead\.gradle\caches\transforms-3\5861500acfc863b7035da42a520ef0d9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\f3af6027d69760bf9fee7ea05e12003d\transformed\lifecycle-service-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\MCDead\.gradle\caches\transforms-3\c0cddbcb2bc8479e529665d1c5db87bf\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\769e8eeb090a40829e9ec33d2a71a862\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\8f58bf5b5905ca2326f40454b7877b24\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\ca301842d762ea764b8314a60102b378\transformed\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\4e5640acfa3303f029a6b28e05225f13\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\3a94067bbc7a20922fd67b30f2364566\transformed\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\2c33c4bae6ea4f0acc28f0ec64c6b2d4\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\7f288a0b9bf5d3232f4a344936bfca78\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\af388519f9a1d2492e3f2fef43ffc53c\transformed\startup-runtime-1.0.0\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\2075b78dabba6d1e688f2dd5a13c6244\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\7182917566217fa236f960078c19258e\transformed\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\23574aa646515120bc7d481972f71742\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\4a686211be3134d52c983281414d9a4c\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\137fae5cb8b43fd4d77cda20fb259169\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\a4b217e30b39977472a1efb97528117e\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.installreferrer:installreferrer:2.2] C:\Users\MCDead\.gradle\caches\transforms-3\41bf1a95269ebac97ce792a43d0edc61\transformed\installreferrer-2.2\AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\111e6e9be3df0e16ccb2077e691a9413\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:1-85:12
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:1-85:12
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:1-85:12
+	package
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:11-41
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:101-126
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:42-100
+	android:versionCode
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:127-150
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+	android:installLocation
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:2:151-181
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:5:5-67
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:19:5-67
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:19:5-67
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:20:5-67
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:20:5-67
+MERGED from [com.yandex.ads.mediation:mobileads-admob:20.5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\a1abdcd41c7ab555614f66dc1a84bcac\transformed\mobileads-admob-20.5.0.1\AndroidManifest.xml:15:5-67
+MERGED from [com.yandex.ads.mediation:mobileads-admob:20.5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\a1abdcd41c7ab555614f66dc1a84bcac\transformed\mobileads-admob-20.5.0.1\AndroidManifest.xml:15:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:7:5-79
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:20:5-79
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:20:5-79
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:21:5-79
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:21:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:24:5-79
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:26:5-79
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:7:22-76
+supports-screens
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:5-135
+	android:largeScreens
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:23-50
+	android:smallScreens
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:106-133
+	android:normalScreens
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:51-79
+	android:anyDensity
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:13:80-105
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:17:5-80
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:17:22-78
+uses-permission#com.google.android.gms.permission.AD_ID
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:19:5-78
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:21:5-79
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:21:5-79
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\72d88e911131551200dcdf8ebb606116\transformed\play-services-ads-identifier-18.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\72d88e911131551200dcdf8ebb606116\transformed\play-services-ads-identifier-18.0.1\AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:19:22-76
+application
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:5-83:19
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:42:5-52:19
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:42:5-52:19
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:25:5-76:19
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:25:5-76:19
+MERGED from [com.yandex.ads.mediation:mobileads-admob:20.5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\a1abdcd41c7ab555614f66dc1a84bcac\transformed\mobileads-admob-20.5.0.1\AndroidManifest.xml:17:5-20
+MERGED from [com.yandex.ads.mediation:mobileads-admob:20.5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\a1abdcd41c7ab555614f66dc1a84bcac\transformed\mobileads-admob-20.5.0.1\AndroidManifest.xml:17:5-20
+MERGED from [com.google.android.gms:play-services-appset:16.0.2] C:\Users\MCDead\.gradle\caches\transforms-3\118e7b656d576b74ff4ab5d36497ab55\transformed\play-services-appset-16.0.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-appset:16.0.2] C:\Users\MCDead\.gradle\caches\transforms-3\118e7b656d576b74ff4ab5d36497ab55\transformed\play-services-appset-16.0.2\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\c494fb5dd185af11e1876c49c243e7b9\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\c494fb5dd185af11e1876c49c243e7b9\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:46:5-65:19
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:46:5-65:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\72d88e911131551200dcdf8ebb606116\transformed\play-services-ads-identifier-18.0.1\AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\72d88e911131551200dcdf8ebb606116\transformed\play-services-ads-identifier-18.0.1\AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-ads-base:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\b7570415ba09ac6da8f391d2d32a7987\transformed\play-services-ads-base-20.5.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-base:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\b7570415ba09ac6da8f391d2d32a7987\transformed\play-services-ads-base-20.5.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\864753bb4f14e68fa84491b925fd4fb8\transformed\play-services-measurement-base-18.0.3\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\864753bb4f14e68fa84491b925fd4fb8\transformed\play-services-measurement-base-18.0.3\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:30:5-143:19
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:30:5-143:19
+MERGED from [androidx.core:core:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\107b48ead489d4dd0a48badb09d9592d\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\107b48ead489d4dd0a48badb09d9592d\transformed\core-1.7.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\MCDead\.gradle\caches\transforms-3\5861500acfc863b7035da42a520ef0d9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\MCDead\.gradle\caches\transforms-3\5861500acfc863b7035da42a520ef0d9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\af388519f9a1d2492e3f2fef43ffc53c\transformed\startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\af388519f9a1d2492e3f2fef43ffc53c\transformed\startup-runtime-1.0.0\AndroidManifest.xml:25:5-31:19
+MERGED from [com.android.installreferrer:installreferrer:2.2] C:\Users\MCDead\.gradle\caches\transforms-3\41bf1a95269ebac97ce792a43d0edc61\transformed\installreferrer-2.2\AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:2.2] C:\Users\MCDead\.gradle\caches\transforms-3\41bf1a95269ebac97ce792a43d0edc61\transformed\installreferrer-2.2\AndroidManifest.xml:11:5-20
+	android:extractNativeLibs
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:152-184
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\107b48ead489d4dd0a48badb09d9592d\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:117-151
+	android:hardwareAccelerated
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:18-52
+	tools:ignore
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:25:18-57
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:21:53-116
+activity#org.test.QtYandexAds.QtYandexAdsActivity
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:9-80:20
+	android:screenOrientation
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:280-319
+	android:label
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:245-279
+	android:launchMode
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:320-350
+	android:configChanges
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:19-188
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:22:189-244
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:23:13-26:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:24:17-68
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:25:17-76
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:25:27-74
+meta-data#android.app.lib_name
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:30:13-96
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:30:60-94
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:30:24-59
+meta-data#android.app.qt_sources_resource_id
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:31:13-112
+	android:resource
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:31:74-110
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:31:24-73
+meta-data#android.app.repository
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:32:13-87
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:32:62-85
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:32:24-61
+meta-data#android.app.qt_libs_resource_id
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:33:13-106
+	android:resource
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:33:71-104
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:33:24-70
+meta-data#android.app.bundled_libs_resource_id
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:34:13-116
+	android:resource
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:34:76-114
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:34:24-75
+meta-data#android.app.bundle_local_qt_libs
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:36:13-91
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:36:72-89
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:36:24-71
+meta-data#android.app.use_local_qt_libs
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:38:13-88
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:38:69-86
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:38:24-68
+meta-data#android.app.libs_prefix
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:39:13-100
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:39:63-98
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:39:24-62
+meta-data#android.app.load_local_libs_resource_id
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:40:13-122
+	android:resource
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:40:79-120
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:40:24-78
+meta-data#android.app.load_local_jars
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:41:13-150
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:41:67-148
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:41:24-66
+meta-data#android.app.static_init_classes
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:42:13-89
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:42:71-87
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:42:24-70
+meta-data#android.app.ministro_not_found_msg
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:46:13-122
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:46:24-70
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:46:71-120
+meta-data#android.app.ministro_needed_msg
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:47:13-116
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:47:24-67
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:47:68-114
+meta-data#android.app.fatal_error_msg
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:48:13-108
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:48:24-63
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:48:64-106
+meta-data#android.app.unsupported_android_version
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:49:13-132
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:49:24-75
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:49:76-130
+meta-data#android.app.background_running
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:66:13-93
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:66:70-91
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:66:24-69
+meta-data#android.app.auto_screen_scale_factor
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:69:13-99
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:69:76-97
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:69:24-75
+meta-data#android.app.extract_android_style
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:78:13-98
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:78:73-96
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:78:24-72
+meta-data#com.google.android.gms.ads.APPLICATION_ID
+ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:81:9-133
+	android:value
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:81:77-131
+	android:name
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml:81:20-76
+uses-sdk
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:14:5-17:590
+MERGED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:14:5-17:590
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:15:5-17:41
+MERGED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:15:5-17:41
+MERGED from [com.yandex.ads.mediation:mobileads-admob:20.5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\a1abdcd41c7ab555614f66dc1a84bcac\transformed\mobileads-admob-20.5.0.1\AndroidManifest.xml:13:5-44
+MERGED from [com.yandex.ads.mediation:mobileads-admob:20.5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\a1abdcd41c7ab555614f66dc1a84bcac\transformed\mobileads-admob-20.5.0.1\AndroidManifest.xml:13:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\68653bf21883c8f561deda403f4d10fb\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\68653bf21883c8f561deda403f4d10fb\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\bab720cc7bd2121cbeacf5d088c56a50\transformed\core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\bab720cc7bd2121cbeacf5d088c56a50\transformed\core-ktx-1.7.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\4f7fde6443b19e6ece3941e32d79f216\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\4f7fde6443b19e6ece3941e32d79f216\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\af07ceebc9ddad3887a8cc2866511b22\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\af07ceebc9ddad3887a8cc2866511b22\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\06d232761adef0ba5b5d99fd1a4b3500\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\06d232761adef0ba5b5d99fd1a4b3500\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-ads:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\d5ba999664166bb36e9dd832a0fb6f7e\transformed\play-services-ads-20.5.0\AndroidManifest.xml:21:5-23:52
+MERGED from [com.google.android.gms:play-services-ads:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\d5ba999664166bb36e9dd832a0fb6f7e\transformed\play-services-ads-20.5.0\AndroidManifest.xml:21:5-23:52
+MERGED from [com.google.android.gms:play-services-appset:16.0.2] C:\Users\MCDead\.gradle\caches\transforms-3\118e7b656d576b74ff4ab5d36497ab55\transformed\play-services-appset-16.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-appset:16.0.2] C:\Users\MCDead\.gradle\caches\transforms-3\118e7b656d576b74ff4ab5d36497ab55\transformed\play-services-appset-16.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\c494fb5dd185af11e1876c49c243e7b9\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\c494fb5dd185af11e1876c49c243e7b9\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
+MERGED from [com.yandex.android:mobmetricalib-identifiers:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\6543056099a03e6627ce127f0343053d\transformed\mobmetricalib-identifiers-5.0.1\AndroidManifest.xml:14:5-16:41
+MERGED from [com.yandex.android:mobmetricalib-identifiers:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\6543056099a03e6627ce127f0343053d\transformed\mobmetricalib-identifiers-5.0.1\AndroidManifest.xml:14:5-16:41
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.ump:user-messaging-platform:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\3d4c3cfd6da175307a9d25b406869b41\transformed\user-messaging-platform-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.ump:user-messaging-platform:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\3d4c3cfd6da175307a9d25b406869b41\transformed\user-messaging-platform-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\72d88e911131551200dcdf8ebb606116\transformed\play-services-ads-identifier-18.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\72d88e911131551200dcdf8ebb606116\transformed\play-services-ads-identifier-18.0.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\b7570415ba09ac6da8f391d2d32a7987\transformed\play-services-ads-base-20.5.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-base:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\b7570415ba09ac6da8f391d2d32a7987\transformed\play-services-ads-base-20.5.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\864753bb4f14e68fa84491b925fd4fb8\transformed\play-services-measurement-base-18.0.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\864753bb4f14e68fa84491b925fd4fb8\transformed\play-services-measurement-base-18.0.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\37dd68a38dc2fe0f95c2ba962d982159\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\37dd68a38dc2fe0f95c2ba962d982159\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\f4f96b6f64c4e289016b728e9d598190\transformed\appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\f4f96b6f64c4e289016b728e9d598190\transformed\appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\840c9dae0598a52eb9dd5bb6b7028feb\transformed\browser-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\840c9dae0598a52eb9dd5bb6b7028feb\transformed\browser-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\913e08ed52afe8f9bdfeff7169cfe857\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\913e08ed52afe8f9bdfeff7169cfe857\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\06a90d9743f8212f77a343f46d78c090\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\06a90d9743f8212f77a343f46d78c090\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\5b5b966ca59807804aa23da69f0f2cc1\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\5b5b966ca59807804aa23da69f0f2cc1\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\5591782a0e4bdcdb9c630a32c203af8f\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\5591782a0e4bdcdb9c630a32c203af8f\transformed\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\2f558a16ae7effefb4c40445cb99fcf6\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\2f558a16ae7effefb4c40445cb99fcf6\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\ab184f952a956d2124517adce3ea9eec\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\ab184f952a956d2124517adce3ea9eec\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\3a91b684008f575ae984b8716902e3f7\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\3a91b684008f575ae984b8716902e3f7\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\4fb902d840465e2b9805977f1d6b945a\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\4fb902d840465e2b9805977f1d6b945a\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\325c92f53eda8c8102854a7546350aed\transformed\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\325c92f53eda8c8102854a7546350aed\transformed\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf9fef39d4962548a4e4bead6bd316b6\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf9fef39d4962548a4e4bead6bd316b6\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\34e4afa6bdb61e696bb8f3d82c690a41\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\34e4afa6bdb61e696bb8f3d82c690a41\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\02ba2442eddfc12787d7e8f7834095e1\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\02ba2442eddfc12787d7e8f7834095e1\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\1d5929fdd2dd1eb6526d78cff549db56\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\1d5929fdd2dd1eb6526d78cff549db56\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\107b48ead489d4dd0a48badb09d9592d\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\107b48ead489d4dd0a48badb09d9592d\transformed\core-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\MCDead\.gradle\caches\transforms-3\5861500acfc863b7035da42a520ef0d9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\MCDead\.gradle\caches\transforms-3\5861500acfc863b7035da42a520ef0d9\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\f3af6027d69760bf9fee7ea05e12003d\transformed\lifecycle-service-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\f3af6027d69760bf9fee7ea05e12003d\transformed\lifecycle-service-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\MCDead\.gradle\caches\transforms-3\c0cddbcb2bc8479e529665d1c5db87bf\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\MCDead\.gradle\caches\transforms-3\c0cddbcb2bc8479e529665d1c5db87bf\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\769e8eeb090a40829e9ec33d2a71a862\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\769e8eeb090a40829e9ec33d2a71a862\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\8f58bf5b5905ca2326f40454b7877b24\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\8f58bf5b5905ca2326f40454b7877b24\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\ca301842d762ea764b8314a60102b378\transformed\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\ca301842d762ea764b8314a60102b378\transformed\lifecycle-livedata-core-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\4e5640acfa3303f029a6b28e05225f13\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\4e5640acfa3303f029a6b28e05225f13\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\3a94067bbc7a20922fd67b30f2364566\transformed\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\3a94067bbc7a20922fd67b30f2364566\transformed\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\2c33c4bae6ea4f0acc28f0ec64c6b2d4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\2c33c4bae6ea4f0acc28f0ec64c6b2d4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\7f288a0b9bf5d3232f4a344936bfca78\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\7f288a0b9bf5d3232f4a344936bfca78\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\af388519f9a1d2492e3f2fef43ffc53c\transformed\startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\af388519f9a1d2492e3f2fef43ffc53c\transformed\startup-runtime-1.0.0\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\2075b78dabba6d1e688f2dd5a13c6244\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\2075b78dabba6d1e688f2dd5a13c6244\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\7182917566217fa236f960078c19258e\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\7182917566217fa236f960078c19258e\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\23574aa646515120bc7d481972f71742\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\23574aa646515120bc7d481972f71742\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\4a686211be3134d52c983281414d9a4c\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\4a686211be3134d52c983281414d9a4c\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\137fae5cb8b43fd4d77cda20fb259169\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\137fae5cb8b43fd4d77cda20fb259169\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\a4b217e30b39977472a1efb97528117e\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\a4b217e30b39977472a1efb97528117e\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.installreferrer:installreferrer:2.2] C:\Users\MCDead\.gradle\caches\transforms-3\41bf1a95269ebac97ce792a43d0edc61\transformed\installreferrer-2.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:2.2] C:\Users\MCDead\.gradle\caches\transforms-3\41bf1a95269ebac97ce792a43d0edc61\transformed\installreferrer-2.2\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\111e6e9be3df0e16ccb2077e691a9413\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\MCDead\.gradle\caches\transforms-3\111e6e9be3df0e16ccb2077e691a9413\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:17:9-587
+	android:targetSdkVersion
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+		ADDED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+		INJECTED from C:\Users\MCDead\Documents\prog\QtYandexAds\src\QtAppWithYandexAds\android-build\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:22:5-76
+	android:name
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:22:22-73
+queries
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:24:5-40:15
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:28:5-44:15
+MERGED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:28:5-44:15
+intent#action:name:android.intent.action.VIEW
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:25:9-27:18
+action#android.intent.action.VIEW
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:26:13-65
+	android:name
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:26:21-62
+intent#action:name:android.intent.action.SENDTO
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:28:9-30:18
+action#android.intent.action.SENDTO
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:29:13-67
+	android:name
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:29:21-64
+intent#action:name:android.intent.action.SEND
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:31:9-33:18
+action#android.intent.action.SEND
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:32:13-65
+	android:name
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:32:21-62
+intent#action:name:android.intent.action.DIAL
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:34:9-36:18
+action#android.intent.action.DIAL
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:35:13-65
+	android:name
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:35:21-62
+intent#action:name:android.intent.action.MEDIA_SCANNER_SCAN_FILE
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:37:9-39:18
+action#android.intent.action.MEDIA_SCANNER_SCAN_FILE
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:38:13-84
+	android:name
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:38:21-81
+activity#com.yandex.mobile.ads.common.AdActivity
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:43:9-46:75
+	android:configChanges
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:45:13-122
+	android:theme
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:46:13-72
+	android:name
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:44:13-67
+provider#com.yandex.mobile.ads.core.initializer.MobileAdsInitializeProvider
+ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:48:9-51:40
+	android:authorities
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:50:13-79
+	android:exported
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:51:13-37
+	android:name
+		ADDED from [com.yandex.android:mobileads:5.2.0] C:\Users\MCDead\.gradle\caches\transforms-3\cfc12a0bc87637f6e0c8439ca7255a75\transformed\mobileads-5.2.0\AndroidManifest.xml:49:13-94
+service#com.yandex.metrica.MetricaService
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:28:9-44:19
+	android:process
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:32:13-39
+	android:enabled
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:30:13-35
+	android:exported
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:29:13-61
+intent-filter#action:name:com.yandex.metrica.IMetricaService+category:name:android.intent.category.DEFAULT+data:scheme:metrica
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:33:13-39:29
+category#android.intent.category.DEFAULT
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:34:17-76
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:34:27-73
+action#com.yandex.metrica.IMetricaService
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:36:17-77
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:36:25-74
+data
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:38:17-50
+	android:scheme
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:38:23-47
+meta-data#metrica:api:level
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:41:13-43:39
+	android:value
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:43:17-36
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:42:17-49
+service#com.yandex.metrica.ConfigurationService
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:45:9-59:19
+	android:process
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:49:13-39
+	android:enabled
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:47:13-35
+	android:exported
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:48:13-37
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:46:13-67
+meta-data#metrica:configuration:api:level
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:50:13-52:37
+	android:value
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:52:17-34
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:51:17-63
+intent-filter#action:name:com.yandex.metrica.configuration.ACTION_INIT
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:54:13-58:29
+action#com.yandex.metrica.configuration.ACTION_INIT
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:57:17-87
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:57:25-84
+service#com.yandex.metrica.ConfigurationJobService
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:60:9-66:19
+	android:process
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:65:13-39
+	android:enabled
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:62:13-35
+	android:exported
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:63:13-37
+	android:permission
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:64:13-69
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:61:13-70
+provider#com.yandex.metrica.PreloadInfoContentProvider
+ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:69:9-75:54
+	android:process
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:74:13-39
+	android:enabled
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:72:13-35
+	android:authorities
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:71:13-81
+	android:exported
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:73:13-36
+	tools:ignore
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:75:13-51
+	android:name
+		ADDED from [com.yandex.android:mobmetricalib:5.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\55b415196a05e2509dc87f913986e8e6\transformed\mobmetricalib-5.0.1\AndroidManifest.xml:70:13-73
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\MCDead\.gradle\caches\transforms-3\1b2efced27bbcf31603e4b5591c8209e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
+ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:31:9-37:18
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:34:13-74
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:34:23-71
+intent#action:name:android.support.customtabs.action.CustomTabsService
+ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:40:9-42:18
+action#android.support.customtabs.action.CustomTabsService
+ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:41:13-90
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:41:21-87
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:49:9-53:64
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:52:13-37
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:51:13-122
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:53:13-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:50:13-65
+provider#com.google.android.gms.ads.MobileAdsInitProvider
+ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:55:9-59:39
+	android:authorities
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:57:13-73
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:58:13-37
+	android:initOrder
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:59:13-36
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:56:13-76
+service#com.google.android.gms.ads.AdService
+ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:61:9-64:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:63:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:64:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:20.5.0] C:\Users\MCDead\.gradle\caches\transforms-3\bf3610b6b2a10de0f6b66a3cb0c2bf0d\transformed\play-services-ads-lite-20.5.0\AndroidManifest.xml:62:13-64
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:25:5-68
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:25:5-68
+MERGED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-sdk-api:18.0.3] C:\Users\MCDead\.gradle\caches\transforms-3\ecc8602fe9251b08130c3c0ce9d5233f\transformed\play-services-measurement-sdk-api-18.0.3\AndroidManifest.xml:25:22-65
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\9c470cce5793a7ef2fc01545b53406f1\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:27:5-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:27:22-78
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:28:5-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:28:22-74
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:31:9-39:20
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\af388519f9a1d2492e3f2fef43ffc53c\transformed\startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\MCDead\.gradle\caches\transforms-3\af388519f9a1d2492e3f2fef43ffc53c\transformed\startup-runtime-1.0.0\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:35:13-31
+	android:authorities
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:33:13-68
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:32:13-67
+meta-data#androidx.work.WorkManagerInitializer
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:36:13-38:52
+	android:value
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:38:17-49
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:37:17-68
+service#androidx.work.impl.background.systemalarm.SystemAlarmService
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:41:9-46:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:44:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:45:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:46:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:43:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:42:13-88
+service#androidx.work.impl.background.systemjob.SystemJobService
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:47:9-53:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:50:13-70
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:51:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:52:13-69
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:53:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:49:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:48:13-84
+service#androidx.work.impl.foreground.SystemForegroundService
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:54:9-59:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:57:13-77
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:58:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:59:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:56:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:55:13-81
+receiver#androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:61:9-66:35
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:64:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:65:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:66:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:63:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:62:13-88
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:67:9-77:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:70:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:71:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:72:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:69:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:68:13-106
+intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:73:13-76:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:74:17-87
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:74:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:75:17-90
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:75:25-87
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:78:9-88:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:81:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:82:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:83:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:80:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:79:13-104
+intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:84:13-87:29
+action#android.intent.action.BATTERY_OKAY
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:85:17-77
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:85:25-74
+action#android.intent.action.BATTERY_LOW
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:86:17-76
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:86:25-73
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:89:9-99:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:92:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:93:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:94:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:91:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:90:13-104
+intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:95:13-98:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:96:17-83
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:96:25-80
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:97:17-82
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:97:25-79
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:100:9-109:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:103:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:104:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:105:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:102:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:101:13-103
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:106:13-108:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:107:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:107:25-76
+receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:110:9-121:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:113:13-36
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:114:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:115:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:112:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:111:13-88
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:116:13-120:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:117:17-79
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:117:25-76
+action#android.intent.action.TIME_SET
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:118:17-73
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:118:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:119:17-81
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:119:25-78
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:122:9-131:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:125:13-72
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:126:13-37
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:127:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:124:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:123:13-99
+intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:128:13-130:29
+action#androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:129:17-98
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:129:25-95
+receiver#androidx.work.impl.diagnostics.DiagnosticsReceiver
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:132:9-142:20
+	android:enabled
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:135:13-35
+	android:exported
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:136:13-36
+	android:permission
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:137:13-57
+	tools:targetApi
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:138:13-32
+	android:directBootAware
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:134:13-44
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:133:13-78
+intent-filter#action:name:androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:139:13-141:29
+action#androidx.work.diagnostics.REQUEST_DIAGNOSTICS
+ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:140:17-88
+	android:name
+		ADDED from [androidx.work:work-runtime:2.7.0] C:\Users\MCDead\.gradle\caches\transforms-3\2a404c347e9f5e685d4e23526405b629\transformed\work-runtime-2.7.0\AndroidManifest.xml:140:25-85
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.2.5] C:\Users\MCDead\.gradle\caches\transforms-3\9a843730a0a784e60951c17829bcf209\transformed\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.android.installreferrer:installreferrer:2.2] C:\Users\MCDead\.gradle\caches\transforms-3\41bf1a95269ebac97ce792a43d0edc61\transformed\installreferrer-2.2\AndroidManifest.xml:9:5-110
+	android:name
+		ADDED from [com.android.installreferrer:installreferrer:2.2] C:\Users\MCDead\.gradle\caches\transforms-3\41bf1a95269ebac97ce792a43d0edc61\transformed\installreferrer-2.2\AndroidManifest.xml:9:22-107

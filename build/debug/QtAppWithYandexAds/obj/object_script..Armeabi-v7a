@@ -1,0 +1,11 @@
+../../build/debug/QtAppWithYandexAds/obj/AdError.obj
+../../build/debug/QtAppWithYandexAds/obj/QmlYandexAdsBanner.obj
+../../build/debug/QtAppWithYandexAds/obj/QtYandexAdsBannerAndroid.obj
+../../build/debug/QtAppWithYandexAds/obj/QtYandexAdsBannerInterface.obj
+../../build/debug/QtAppWithYandexAds/obj/QtYandexAdsManager.obj
+../../build/debug/QtAppWithYandexAds/obj/main.obj
+../../build/debug/QtAppWithYandexAds/obj/qrc_qml.obj
+../../build/debug/QtAppWithYandexAds/obj/moc_AdError.obj
+../../build/debug/QtAppWithYandexAds/obj/moc_QmlYandexAdsBanner.obj
+../../build/debug/QtAppWithYandexAds/obj/moc_QtYandexAdsBannerAndroid.obj
+../../build/debug/QtAppWithYandexAds/obj/moc_QtYandexAdsBannerInterface.obj

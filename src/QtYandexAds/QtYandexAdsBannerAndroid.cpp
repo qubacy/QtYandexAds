@@ -1,8 +1,9 @@
 #include "QtYandexAdsBannerAndroid.h"
+#include "qdebug.h"
 
 bool QtYandexAdsBannerAndroid::m_isNativeContextPrepared = false;
 QtYandexAdsBannerAndroid::BannerId QtYandexAdsBannerAndroid::m_curBannerId = 0;
-std::shared_ptr<QHash<QtYandexAdsBannerAndroid::BannerId, std::shared_ptr<QtYandexAdsBannerAndroid>>> QtYandexAdsBannerAndroid::m_instances = std::shared_ptr<QHash<QtYandexAdsBannerAndroid::BannerId, std::shared_ptr<QtYandexAdsBannerAndroid>>>();
+std::shared_ptr<QHash<QtYandexAdsBannerAndroid::BannerId, std::shared_ptr<QtYandexAdsBannerAndroid>>> QtYandexAdsBannerAndroid::m_instances = std::make_shared<QHash<QtYandexAdsBannerAndroid::BannerId, std::shared_ptr<QtYandexAdsBannerAndroid>>>();
 
 const AdError QtYandexAdsBannerAndroid::getAdErrorByErrorCode(ErrorCode code)
 {
@@ -32,20 +33,48 @@ bool QtYandexAdsBannerAndroid::initializeContext()
     
     if (env->ExceptionCheck()) return false;
     
+    if (!prepareNativeContext(env))
+        return false;
+    
     QAndroidJniObject::callStaticMethod<void>("org.test.QtYandexAds/QtYandexAdsActivity", "CreateInstance", "()V");
     
-    return true;
+    // checking for SDK init status...
+    
+    auto endTime = QTime::currentTime().addMSecs(C_SDK_INIT_TIMEOUT_MS);
+    bool isInit {false};
+    
+    while (QTime::currentTime() < endTime) {
+        isInit = QAndroidJniObject::callStaticMethod<jboolean>("org.test.QtYandexAds/QtYandexAdsActivity", "CheckIsSDKInitialized", "()Z");
+    
+        if (isInit) {
+            qInfo() << "QtYandexAdsBannerAndroid Context initialized";
+            
+            break;
+        }
+    }
+    
+    return isInit;
 }
 
 std::shared_ptr<QtYandexAdsBannerAndroid> QtYandexAdsBannerAndroid::generateInstance()
 {
-    auto newInstance      = std::make_shared<QtYandexAdsBannerAndroid>();
+    qInfo() << "QtYandexAdsBannerAndroid::generateInstance() started";
+    
+    auto newInstance = std::make_shared<QtYandexAdsBannerAndroid>();
+    
+    m_instances->insert(newInstance->m_bannerId, newInstance); // FIXME: ILLEGAL
+    
     jint insertedBannerId = QAndroidJniObject::callStaticMethod<jint>("org.test.QtYandexAds/QtYandexAdsActivity", "CreateNewBanner", "(I)I", static_cast<jint>(newInstance->m_bannerId));    
     
-    if (insertedBannerId < 0) 
-        return std::shared_ptr<QtYandexAdsBannerAndroid>();
+    qInfo() << "QtYandexAdsBannerAndroid::generateInstance() insertedBannerId: " << insertedBannerId;
     
-    m_instances->insert(newInstance->m_bannerId, newInstance);
+    if (insertedBannerId < 0) {
+        m_instances->remove(newInstance->m_bannerId);
+        
+        return std::shared_ptr<QtYandexAdsBannerAndroid>();
+    }
+    
+    qInfo() << "QtYandexAdsBannerAndroid::generateInstance() ended";
     
     return newInstance;
 }
@@ -205,16 +234,19 @@ QtYandexAdsBannerAndroid::BannerId QtYandexAdsBannerAndroid::getBannerId() const
     return m_bannerId;
 }
 
-bool QtYandexAdsBannerAndroid::prepareNativeContext(QAndroidJniEnvironment &env, 
-                                                    const jclass jActivityClass)
+bool QtYandexAdsBannerAndroid::prepareNativeContext(QAndroidJniEnvironment &env)
 {
     if (env->ExceptionCheck()) return false;
     
-    JNINativeMethod methods[] {{"onBannerLoaded",     "()V",                   reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoaded)},
-                               {"onBannerLoading",    "()V",                   reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoading)},
-                               {"onBannerClicked",    "()V",                   reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerClicked)},
-                               {"onBannerLoadFail",   "(I)V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoadFail)}/*,
+    JNINativeMethod methods[] {{"onBannerLoaded",     "(I)V",                   reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoaded)},
+                               {"onBannerLoading",    "(I)V",                   reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoading)},
+                               {"onBannerClicked",    "(I)V",                   reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerClicked)},
+                               {"onBannerLoadFail",   "(II)V",                  reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerLoadFail)}/*,
                                {"onBannerImpression", "(Ljava/lang/String;)V", reinterpret_cast<void *>(QtYandexAdsBannerAndroid::processBannerImpression)}*/};
+    
+    jclass jActivityClass = env->FindClass("org/test/QtYandexAds/QtYandexAdsActivity");
+    
+    if (env->ExceptionCheck()) return false;
     
     env->RegisterNatives(jActivityClass,
                          methods,
@@ -225,6 +257,8 @@ bool QtYandexAdsBannerAndroid::prepareNativeContext(QAndroidJniEnvironment &env,
 
 void QtYandexAdsBannerAndroid::processBannerLoading(JNIEnv *env, jobject thiz, const jint bannerId)
 {
+    qInfo() << "QtYandexAdsBannerAndroid::processBannerLoading() started";
+    
     auto curBannerInstance = getInstanceByJavaObjectIdWithCheck(env, thiz, bannerId);
     
     emit curBannerInstance->loading();
