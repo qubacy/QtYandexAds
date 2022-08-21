@@ -11,8 +11,8 @@ class QtYandexAdsBannerInterface : public QObject
 {
     Q_OBJECT
     
-public:
-    constexpr static const char* C_TEST_UNIT_ID = "R-M-DEMO-300x250";
+//public:
+//    constexpr static const char* C_TEST_UNIT_ID = "R-M-DEMO-300x250";
     
 public:
     enum Sizes : uint8_t {

@@ -74,6 +74,38 @@ std::shared_ptr<QtYandexAdsBannerAndroid> QtYandexAdsBannerAndroid::generateInst
         return std::shared_ptr<QtYandexAdsBannerAndroid>();
     }
     
+    // position init:
+    
+    QAndroidJniObject jPositionObj{QAndroidJniObject::callStaticObjectMethod("org.test.QtYandexAds/QtYandexAdsActivity", "GetAdBannerPosition", "(I)[I", static_cast<jint>(newInstance->m_bannerId))};    
+    
+    if (!jPositionObj.isValid()) {
+        m_instances->remove(newInstance->m_bannerId);
+        
+        return std::shared_ptr<QtYandexAdsBannerAndroid>();
+    }
+    
+    jintArray jPosition{jPositionObj.object<jintArray>()};
+    
+    QAndroidJniEnvironment env{};
+    
+    if (env->ExceptionCheck()) {
+        m_instances->remove(newInstance->m_bannerId);
+        
+        return std::shared_ptr<QtYandexAdsBannerAndroid>();
+    }
+    
+    jint* position{env->GetIntArrayElements(jPosition, 0)};
+    
+    if (!position) {
+        m_instances->remove(newInstance->m_bannerId);
+        
+        return std::shared_ptr<QtYandexAdsBannerAndroid>();
+    }
+    
+    QPoint positionPoint{position[0], position[1]};
+    
+    newInstance->initializePosition(positionPoint);
+    
     qInfo() << "QtYandexAdsBannerAndroid::generateInstance() ended";
     
     return newInstance;
@@ -183,6 +215,13 @@ QSize QtYandexAdsBannerAndroid::sizeInPixels()
     return QSize(width, height);
 }
 
+bool QtYandexAdsBannerAndroid::initializePosition(const QPoint &position)
+{
+    if (!m_position.isNull()) return false;
+    
+    return QtYandexAdsBannerInterface::setPosition(position);
+}
+
 bool QtYandexAdsBannerAndroid::setPosition(const QPoint &position)
 {
     if (!isValid()) return false;
@@ -191,7 +230,7 @@ bool QtYandexAdsBannerAndroid::setPosition(const QPoint &position)
     
     QAndroidJniObject::callStaticMethod<void>("org.test.QtYandexAds/QtYandexAdsActivity", "SetAdBannerPosition", "(III)V", m_bannerId, position.x(), position.y());
     
-    return QtYandexAdsBannerInterface::setPosition(position);
+    return true;//QtYandexAdsBannerInterface::setPosition(position);
 }
 
 const QPoint &QtYandexAdsBannerAndroid::position() const

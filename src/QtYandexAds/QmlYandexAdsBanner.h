@@ -14,8 +14,8 @@ class QmlYandexAdsBanner : public QObject
     Q_PROPERTY(int width READ width NOTIFY sizeChanged)
     Q_PROPERTY(int height READ height NOTIFY sizeChanged)
     Q_PROPERTY(QPoint position READ position WRITE  setPosition NOTIFY positionChanged)
-    Q_PROPERTY(int x READ x WRITE  setX NOTIFY positionChanged)
-    Q_PROPERTY(int y READ y WRITE  setY NOTIFY positionChanged)
+    Q_PROPERTY(int x READ x WRITE setX NOTIFY positionChanged)
+    Q_PROPERTY(int y READ y WRITE setY NOTIFY positionChanged)
     Q_PROPERTY(bool visible READ visible WRITE  setVisible NOTIFY visibleChanged)
     Q_PROPERTY(bool isLoaded READ isLoaded NOTIFY loaded)
 

@@ -248,6 +248,8 @@ public class QtYandexAdsActivity extends QtActivity {
 
     public static void SetAdBannerUnitId(final String adId) {
         if (m_Instance == null || adId.length() <= 0) return;
+        
+        Log.d(YANDEX_MOBILE_ADS_TAG, "SetAdBannerUnitId(): adId = " + adId);                    
 
         m_Instance.m_BannerAdUnitId = adId;
 
@@ -284,6 +286,16 @@ public class QtYandexAdsActivity extends QtActivity {
         if (!curBanner.SetAdBannerPosition(x, y)) {
             // FIXME: HANDLE ERROR CASE
         }
+    }
+
+    public static int[] GetAdBannerPosition(final int bannerId) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
+
+        if (curBanner == null) return null;
+        
+        int[] intArray = new int[]{curBanner.GetAdBannerX(), curBanner.GetAdBannerY()};
+    
+        return intArray;
     }
 
     public static boolean IsAdBannerLoaded(final int bannerId) {

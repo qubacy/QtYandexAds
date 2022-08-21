@@ -57,6 +57,8 @@ public class QtYandexAdsBanner {
 
             @Override
             public void onAdClicked() {
+                Log.d("QtYandexAdsBanner", "onAdClicked()");
+                
                 m_BannerActivity.onBannerClicked(m_BannerId);
             }
 
@@ -67,17 +69,23 @@ public class QtYandexAdsBanner {
 
             @Override
             public void onAdFailedToLoad(AdRequestError adRequestError) {
+                Log.d("QtYandexAdsBanner", "onAdFailedToLoad()");
+                
                 m_BannerActivity.onBannerLoadFail(m_BannerId, adRequestError.getCode());
             }
 
             @Override
             public void onLeftApplication() {
+                Log.d("QtYandexAdsBanner", "onLeftApplication()");
+                
                 ShutdownAdBanner();
             }
 
             @Override
             public void onReturnedToApplication() {
-                InitializeAdBanner(context);
+                Log.d("QtYandexAdsBanner", "onReturnedToApplication()");
+                
+                //InitializeAdBanner(context);
                 RequestAdBannerContent();
             }
         });
@@ -130,48 +138,101 @@ public class QtYandexAdsBanner {
     }
 
     public boolean IsAdBannerVisible() {
+        if (m_BannerView == null) return false;
+        
         return (m_BannerView.getVisibility() == View.VISIBLE);
     }
 
     public int GetAdBannerWidth() {
+        if (m_BannerView == null) return -1;
+        
         return m_BannerView.getWidth();
     }
 
     public int GetAdBannerHeight() {
+        if (m_BannerView == null) return -1;
+        
         return  m_BannerView.getHeight();
     }
 
-    public void ProcessNewAdBannerUnitId() {
-        m_BannerView.setAdUnitId(m_BannerActivity.GetBannerAdUnitId());
+    public int GetAdBannerX() {
+        return (int)m_BannerView.getX();
+    }
 
-        RequestAdBannerContent();
+    public int GetAdBannerY() {
+        return (int)m_BannerView.getY();
+    }
+
+    public void ProcessNewAdBannerUnitId() {
+//        m_BannerView.setAdUnitId(m_BannerActivity.GetBannerAdUnitId());
+
+        if (m_BannerView == null) return;
+
+        AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
+        
+        m_BannerActivity.runOnUiThread(new Runnable() {
+            public void run() {
+                Log.d("QtYandexAdsBanner", "ProcessNewAdBannerUnitId(). New unitId: " + m_BannerActivity.GetBannerAdUnitId());
+                
+                //m_BannerView.destroy();
+        
+                InitializeAdBanner(m_BannerActivity);
+                RequestAdBannerContent();
+                ShowAdBanner();
+                
+                isOnWaitingForUiThread.set(false);
+            }
+        });
+    
+        while (isOnWaitingForUiThread.get()) { }
+            
     }
 
     public boolean SetAdBannerSize(final int size) {
-        if (m_BannerView == null) return false;
+        Log.d("QtYandexAdsBanner", "Banner size changing. Size: " + size);
+        
+        AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
+        AtomicBoolean result = new AtomicBoolean(false);
+        
+        m_BannerActivity.runOnUiThread(new Runnable() {
+            public void run() {
+                if (m_BannerView == null) return;
+        
+                AdSize adSize = AdSize.BANNER_320x50;
+        
+                // FIXME: decide banner ENUM storing issue
+        
+                switch (size) {
+                    case 1: { adSize = AdSize.BANNER_320x50;  break; }
+                    case 2: { adSize = AdSize.BANNER_320x100; break; }
+                    case 3: { adSize = AdSize.BANNER_400x240; break; }
+                    case 4: { adSize = AdSize.BANNER_728x90;  break; }
+                    case 5: { adSize = AdSize.FULL_SCREEN;    break; }
+                };
+        
+                m_BannerAdSize = adSize;
+        
+                //m_BannerView.setAdSize(adSize);
+                
+                //m_BannerView.destroy();
+        
+                InitializeAdBanner(m_BannerActivity);
+                RequestAdBannerContent();
+                ShowAdBanner();
+                
+                result.set(true);
+                isOnWaitingForUiThread.set(false);
+            }
+        });
+    
+        while (isOnWaitingForUiThread.get()) { }
 
-        AdSize adSize = AdSize.BANNER_320x50;
-
-        // FIXME: decide banner ENUM storing issue
-
-        switch (size) {
-            case 1: { adSize = AdSize.BANNER_320x50;  break; }
-            case 2: { adSize = AdSize.BANNER_320x100; break; }
-            case 3: { adSize = AdSize.BANNER_400x240; break; }
-            case 4: { adSize = AdSize.BANNER_728x90;  break; }
-            case 5: { adSize = AdSize.FULL_SCREEN;    break; }
-        };
-
-        m_BannerAdSize = adSize;
-
-        m_BannerView.setAdSize(adSize);
-
-        RequestAdBannerContent();
-
-        return true;
+        return result.get();
     }
 
     public boolean SetAdBannerPosition(final int x, final int y) {
+        Log.d("QtYandexAdsBanner", "Banner pos changing: " + x + ":" + y);
+        
         if (m_BannerView == null) return false;
 
 //        FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT,
@@ -189,21 +250,27 @@ public class QtYandexAdsBanner {
     }
 
     public void ShutdownAdBanner() {
+        Log.d("QtYandexAdsBanner", "Banner shutdown");
+        
         if (m_BannerView == null) return;
 
-        m_BannerView.destroy();
+        //m_BannerView.destroy();
 
         m_IsBannerLoaded = false;
     }
 
     public void ShowAdBanner() {
         if (m_BannerView == null) return;
+        
+        Log.d("QtYandexAdsBanner", "ShowAdBanner()");
 
         m_BannerView.setVisibility(View.VISIBLE);
     }
 
     public void HideAdBanner() {
         if (m_BannerView == null) return;
+        
+        Log.d("QtYandexAdsBanner", "HideAdBanner()");
 
         m_BannerView.setVisibility(View.GONE);
     }

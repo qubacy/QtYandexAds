@@ -51,6 +51,7 @@ public:
     virtual Sizes size() const override;
     virtual QSize sizeInPixels() override;
     
+    bool initializePosition(const QPoint &position);
     virtual bool setPosition(const QPoint &position) override;
     virtual const QPoint &position() const override;
     
