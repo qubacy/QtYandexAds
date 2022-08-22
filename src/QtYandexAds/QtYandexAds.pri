@@ -33,5 +33,6 @@ unix {
 DISTFILES += \
     $$PWD/platform/android/AndroidManifest.xml \
     $$PWD/platform/android/build.gradle \
+    $$PWD/platform/android/gradle.properties \
     $$PWD/platform/android/src/org/test/QtYandexAds/QtYandexAdsActivity.java \
     $$PWD/platform/android/src/org/test/QtYandexAds/QtYandexAdsBanner.java
