@@ -47,11 +47,11 @@ public:
     virtual bool setUnitId(const QString &unitId) override;
     virtual const QString &unitId() const override;
     
-    virtual bool setSize(Sizes size) override;
-    virtual Sizes size() const override;
-    virtual QSize sizeInPixels() override;
+    virtual bool initializeSizeUsingNative() override;
+    virtual bool setSize(const QSize &size) override;
+    virtual const QSize& size() const override;
     
-    bool initializePosition(const QPoint &position);
+    virtual bool initializePositionUsingNative() override;
     virtual bool setPosition(const QPoint &position) override;
     virtual const QPoint &position() const override;
     

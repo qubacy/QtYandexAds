@@ -9,10 +9,10 @@
 class QmlYandexAdsBanner : public QObject
 {
     Q_PROPERTY(QString unitId READ unitId WRITE setUnitId NOTIFY unitIdChanged)
-    Q_PROPERTY(QtYandexAdsBannerInterface::Sizes size READ size WRITE  setSize NOTIFY sizeChanged)
-    Q_PROPERTY(QSize sizeInPixels READ sizeInPixels NOTIFY sizeChanged)
-    Q_PROPERTY(int width READ width NOTIFY sizeChanged)
-    Q_PROPERTY(int height READ height NOTIFY sizeChanged)
+//    Q_PROPERTY(QSize size READ size WRITE  setSize NOTIFY sizeChanged)
+//    Q_PROPERTY(QSize sizeInPixels READ sizeInPixels NOTIFY sizeChanged)
+    Q_PROPERTY(int width READ width WRITE setWidth NOTIFY sizeChanged)
+    Q_PROPERTY(int height READ height WRITE setHeight NOTIFY sizeChanged)
     Q_PROPERTY(QPoint position READ position WRITE  setPosition NOTIFY positionChanged)
     Q_PROPERTY(int x READ x WRITE setX NOTIFY positionChanged)
     Q_PROPERTY(int y READ y WRITE setY NOTIFY positionChanged)
@@ -29,9 +29,12 @@ public:
     void setUnitId(const QString& unitId);
     const QString& unitId() const;
 
-    void setSize(QtYandexAdsBannerInterface::Sizes size);
-    QtYandexAdsBannerInterface::Sizes size() const;
-    QSize sizeInPixels();
+    void setWidth (const int width);
+    void setHeight(const int height);
+    
+    //void setSize(QtYandexAdsBannerInterface::Sizes size);
+    //QtYandexAdsBannerInterface::Sizes size() const;
+//    QSize sizeInPixels();
 
     int width();
     int height();
@@ -39,10 +42,10 @@ public:
     void setPosition(const QPoint& position);
     const QPoint& position() const;
 
-    void setX(int x);
+    void setX(const int x);
     int x();
 
-    void setY(int y);
+    void setY(const int y);
     int y();
 
     void setVisible(bool isVisible);

@@ -58,14 +58,6 @@ public class QtYandexAdsActivity extends QtActivity {
         Log.d(YANDEX_MOBILE_ADS_TAG, "Banner inserted into m_BannerList");
         
         QtYandexAdsBanner newBanner = m_Instance.m_BannerList.get(bannerId);
-
-        // new banner layout setup:
-
-        if (!m_Instance.SetupBannerLayout(newBanner)) {
-            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
-
-            return -1;
-        }
     
         Log.d(YANDEX_MOBILE_ADS_TAG, "Banner creation ended");
 
@@ -76,8 +68,23 @@ public class QtYandexAdsActivity extends QtActivity {
         if (m_Instance == null) return;
         if (bannerId < 0 || m_Instance.m_BannerList.size() <= bannerId)
             return;
-
-        m_Instance.m_BannerList.remove(bannerId);
+        
+        AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
+        
+        m_Instance.runOnUiThread(new Runnable() {
+            public void run() {
+                QtYandexAdsBanner newBanner = m_Instance.m_BannerList.get(bannerId);
+                
+                if (newBanner == null) return;
+                
+                newBanner.Destroy();
+                m_Instance.m_BannerList.remove(bannerId);
+                
+                isOnWaitingForUiThread.set(false);
+            }
+        });
+     
+        while (isOnWaitingForUiThread.get()) { }
     }
 
     @Override
@@ -146,91 +153,107 @@ public class QtYandexAdsActivity extends QtActivity {
         return mainWindow.getDecorView();
     }
 
-    private boolean SetupBannerLayout(QtYandexAdsBanner banner) {
+    private ViewGroup GetMainLayout() {
+        View decorView = GetMainDecorView();
+
+        if (decorView == null) return null;
+
+        View rootView = decorView.getRootView();
+
+        if (rootView == null) return null;
+
+        if (rootView instanceof ViewGroup) {
+            int statusBarHeight = GetStatusBarHeight();
+
+            if (statusBarHeight < 0) return null;
+            
+            return ((ViewGroup) rootView);
+        }
+    
+        return null;
+    }
+
+    public boolean RemoveBannerFromLayout(QtYandexAdsBanner banner) {
+        if (banner == null) return false;
+        
+        View bannerView = banner.GetBannerView();
+        
+        if (bannerView == null) return false;
+        
+        AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
+        AtomicBoolean result = new AtomicBoolean(false);
+        
+        Log.d(YANDEX_MOBILE_ADS_TAG, "Banner layout RESET started");
+        
+        runOnUiThread(new Runnable() {
+            public void run() {
+                ViewGroup viewGroup = GetMainLayout();
+                
+                if (viewGroup == null) {
+                    isOnWaitingForUiThread.set(false);
+                    
+                    return;
+                }
+            
+                viewGroup.removeView(bannerView);
+                
+                result.set(true);
+                isOnWaitingForUiThread.set(false);
+            }
+        });
+                
+        while (isOnWaitingForUiThread.get()) { }
+
+        return result.get();
+    }
+
+    public boolean SetupBannerLayout(QtYandexAdsBanner banner, boolean isInitial) {
         Log.d(YANDEX_MOBILE_ADS_TAG, "Banner layout setup started");
         
         if (banner == null) return false;
+        
+        View bannerView = banner.GetBannerView();
+        
+        if (bannerView == null) return false;
 
         AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
         AtomicBoolean result = new AtomicBoolean(false);
         
-        // layout setup:
         runOnUiThread(new Runnable() {
             public void run() {
-                View decorView = GetMainDecorView();
-        
-                if (decorView == null) {
-                    // FIXME: AdRequestError.Code should be replaced
-        
-                    isOnWaitingForUiThread.set(false);
-                    
-                    return;
-                }
-        
-                View rootView = decorView.getRootView();
-        
-                if (rootView == null) {
-                    isOnWaitingForUiThread.set(false);
-                    
-                    return;
-                }
+                ViewGroup viewGroup = GetMainLayout();
                 
-                Log.d(YANDEX_MOBILE_ADS_TAG, "SetupBannerLayout(): rootView caught");
-        
-                if (rootView instanceof ViewGroup) {
-                    int statusBarHeight = GetStatusBarHeight();
-        
-                    if (statusBarHeight < 0) {
+                if (viewGroup == null) {
+                    isOnWaitingForUiThread.set(false);
+                    
+                    return;
+                }
+            
+                if (isInitial) {
+                    if (!banner.SetAdBannerPosition(banner.GetAdBannerX(), GetStatusBarHeight())) {
                         isOnWaitingForUiThread.set(false);
                         
                         return;
                     }
-                    
-                    Log.d(YANDEX_MOBILE_ADS_TAG, "SetupBannerLayout(): statusBarHeight caught");
-        
-                    banner.SetAdBannerPosition(QtYandexAdsBanner.DEFAULT_AD_BANNER_X, statusBarHeight);
-                    
-                    ViewGroup viewGroup = ((ViewGroup) rootView);
-                    View bannerView = banner.GetBannerView();        
-                    
-                    ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                        ViewGroup.LayoutParams.WRAP_CONTENT);
-                    
-                    bannerView.setLayoutParams(layoutParams);
-                    
-                    Log.d(YANDEX_MOBILE_ADS_TAG, "SetupBannerLayout(): banner about to be shown " + bannerView.getWidth());                               
-                    
-                    viewGroup.addView(bannerView);
-                    
-                    Log.d(YANDEX_MOBILE_ADS_TAG, "SetupBannerLayout(): banner pos: " + bannerView.getX() + ":" + bannerView.getY() + "; size: " + bannerView.getWidth() + ":" + bannerView.getHeight());  
-                    
-                    banner.ShowAdBanner();
-                    
-                    Log.d(YANDEX_MOBILE_ADS_TAG, "SetupBannerLayout(): banner shown");            
-        
-                } else {
-                    // layout error processing:
-                    
-                    
                 }
+            
+                ViewGroup.LayoutParams layoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT);
+                
+                bannerView.setLayoutParams(layoutParams);
+                
+                Log.d(YANDEX_MOBILE_ADS_TAG, "SetupBannerLayout(): banner about to be shown " + bannerView.getWidth());                               
+                
+                viewGroup.addView(bannerView);
+                
+                Log.d(YANDEX_MOBILE_ADS_TAG, "SetupBannerLayout(): banner pos: " + bannerView.getX() + ":" + bannerView.getY() + "; size: " + bannerView.getWidth() + ":" + bannerView.getHeight());  
+                
+                banner.ShowAdBanner();
+                
+                Log.d(YANDEX_MOBILE_ADS_TAG, "SetupBannerLayout(): banner shown");            
             
                 result.set(true);
                 isOnWaitingForUiThread.set(false);
-        
-                // android layout setup:
-        
-        //        ConstraintLayout mainLayout = new ConstraintLayout(this);
-        //
-        //        ConstraintLayout.LayoutParams bannerLayoutParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT,
-        //                ConstraintLayout.LayoutParams.WRAP_CONTENT);
-        //
-        //        bannerLayoutParams.topToTop = ConstraintLayout.LayoutParams.PARENT_ID;
-        //        bannerLayoutParams.baselineToBaseline = ConstraintLayout.LayoutParams.PARENT_ID;
-        //
-        //        m_Banner.setLayoutParams(bannerLayoutParams);
-        //        mainLayout.addView(m_Banner);
-        //
-        //        setContentView(mainLayout);
             }
         });
     
@@ -258,7 +281,9 @@ public class QtYandexAdsActivity extends QtActivity {
 
             if (curBanner == null) return;
 
-            curBanner.ProcessNewAdBannerUnitId();
+            if (!curBanner.ProcessNewAdBannerUnitId()) {
+                onBannerLoadFail(curBanner.GetBannerId(), AdRequestError.Code.SYSTEM_ERROR);
+            }
         }
     }
 
@@ -268,14 +293,26 @@ public class QtYandexAdsActivity extends QtActivity {
         return m_Instance.m_BannerAdUnitId;
     }
 
-    public static void SetAdBannerSize(final int bannerId, final int size) {
+    public static void SetAdBannerSize(final int bannerId, final int width, final int height) {
         QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
 
         if (curBanner == null) return;
 
-        if (!curBanner.SetAdBannerSize(size)) {
+        if (!curBanner.SetAdBannerSize(width, height)) {
             // FIXME: HANDLE ERROR CASE
+            
+            onBannerLoadFail(curBanner.GetBannerId(), AdRequestError.Code.SYSTEM_ERROR);            
         }
+    }
+
+    public static int[] GetAdBannerSize(final int bannerId) {
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
+    
+        if (curBanner == null) return null;
+        
+        int[] intArray = new int[]{curBanner.GetAdBannerWidth(), curBanner.GetAdBannerHeight()};
+    
+        return intArray;
     }
 
     public static void SetAdBannerPosition(final int bannerId, final int x, final int y) {

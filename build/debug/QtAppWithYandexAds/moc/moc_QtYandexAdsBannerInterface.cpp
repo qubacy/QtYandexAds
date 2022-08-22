@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QtYandexAdsBannerInterface_t {
-    QByteArrayData data[17];
-    char stringdata0[200];
+    QByteArrayData data[9];
+    char stringdata0[83];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,23 +40,12 @@ QT_MOC_LITERAL(4, 43, 6), // "closed"
 QT_MOC_LITERAL(5, 50, 7), // "clicked"
 QT_MOC_LITERAL(6, 58, 12), // "errorOccured"
 QT_MOC_LITERAL(7, 71, 7), // "AdError"
-QT_MOC_LITERAL(8, 79, 3), // "err"
-QT_MOC_LITERAL(9, 83, 5), // "Sizes"
-QT_MOC_LITERAL(10, 89, 9), // "S_INVALID"
-QT_MOC_LITERAL(11, 99, 18), // "S_SMALL_HORIZONTAL"
-QT_MOC_LITERAL(12, 118, 19), // "S_MEDIUM_HORIZONTAL"
-QT_MOC_LITERAL(13, 138, 20), // "S_MEDIUM_RECTANGULAR"
-QT_MOC_LITERAL(14, 159, 18), // "S_LARGE_HORIZONTAL"
-QT_MOC_LITERAL(15, 178, 13), // "S_FULL_SCREEN"
-QT_MOC_LITERAL(16, 192, 7) // "S_COUNT"
+QT_MOC_LITERAL(8, 79, 3) // "err"
 
     },
     "QtYandexAdsBannerInterface\0loaded\0\0"
     "loading\0closed\0clicked\0errorOccured\0"
-    "AdError\0err\0Sizes\0S_INVALID\0"
-    "S_SMALL_HORIZONTAL\0S_MEDIUM_HORIZONTAL\0"
-    "S_MEDIUM_RECTANGULAR\0S_LARGE_HORIZONTAL\0"
-    "S_FULL_SCREEN\0S_COUNT"
+    "AdError\0err"
 };
 #undef QT_MOC_LITERAL
 
@@ -68,7 +57,7 @@ static const uint qt_meta_data_QtYandexAdsBannerInterface[] = {
        0,    0, // classinfo
        5,   14, // methods
        0,    0, // properties
-       1,   46, // enums/sets
+       0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        5,       // signalCount
@@ -86,18 +75,6 @@ static const uint qt_meta_data_QtYandexAdsBannerInterface[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 7,    8,
-
- // enums: name, alias, flags, count, data
-       9,    9, 0x0,    7,   51,
-
- // enum data: key, value
-      10, uint(QtYandexAdsBannerInterface::S_INVALID),
-      11, uint(QtYandexAdsBannerInterface::S_SMALL_HORIZONTAL),
-      12, uint(QtYandexAdsBannerInterface::S_MEDIUM_HORIZONTAL),
-      13, uint(QtYandexAdsBannerInterface::S_MEDIUM_RECTANGULAR),
-      14, uint(QtYandexAdsBannerInterface::S_LARGE_HORIZONTAL),
-      15, uint(QtYandexAdsBannerInterface::S_FULL_SCREEN),
-      16, uint(QtYandexAdsBannerInterface::S_COUNT),
 
        0        // eod
 };

@@ -33,29 +33,43 @@ const QString &QmlYandexAdsBanner::unitId() const
     return m_ad->unitId();
 }
 
-void QmlYandexAdsBanner::setSize(QtYandexAdsBannerInterface::Sizes size)
+void QmlYandexAdsBanner::setWidth(const int width)
 {
-    emit sizeChanged(m_ad->setSize(size));
+    if (width <= 0) return;
+    
+    emit sizeChanged(m_ad->setSize(QSize{width, height()}));
 }
 
-QtYandexAdsBannerInterface::Sizes QmlYandexAdsBanner::size() const
+void QmlYandexAdsBanner::setHeight(const int height)
 {
-    return m_ad->size();
+    if (height <= 0) return;
+    
+    emit sizeChanged(m_ad->setSize(QSize{width(), height}));
 }
 
-QSize QmlYandexAdsBanner::sizeInPixels()
-{
-    return m_ad->sizeInPixels();
-}
+//void QmlYandexAdsBanner::setSize(QtYandexAdsBannerInterface::Sizes size)
+//{
+//    emit sizeChanged(m_ad->setSize(size));
+//}
+
+//QtYandexAdsBannerInterface::Sizes QmlYandexAdsBanner::size() const
+//{
+//    return m_ad->size();
+//}
+
+//QSize QmlYandexAdsBanner::sizeInPixels()
+//{
+//    return m_ad->sizeInPixels();
+//}
 
 int QmlYandexAdsBanner::width()
 {
-    return sizeInPixels().width();
+    return m_ad->size().width(); //sizeInPixels().width();
 }
 
 int QmlYandexAdsBanner::height()
 {
-    return sizeInPixels().height();
+    return m_ad->size().height(); //sizeInPixels().height();
 }
 
 void QmlYandexAdsBanner::setPosition(const QPoint &position)

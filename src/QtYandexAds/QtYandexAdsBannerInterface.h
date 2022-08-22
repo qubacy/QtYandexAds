@@ -15,16 +15,16 @@ class QtYandexAdsBannerInterface : public QObject
 //    constexpr static const char* C_TEST_UNIT_ID = "R-M-DEMO-300x250";
     
 public:
-    enum Sizes : uint8_t {
-        S_INVALID = 0,
-        S_SMALL_HORIZONTAL,
-        S_MEDIUM_HORIZONTAL,
-        S_MEDIUM_RECTANGULAR,
-        S_LARGE_HORIZONTAL,
-        S_FULL_SCREEN,
-        S_COUNT
-    };
-    Q_ENUM(Sizes)
+//    enum Sizes : uint8_t {
+//        S_INVALID = 0,
+//        S_SMALL_HORIZONTAL,
+//        S_MEDIUM_HORIZONTAL,
+//        S_MEDIUM_RECTANGULAR,
+//        S_LARGE_HORIZONTAL,
+//        S_FULL_SCREEN,
+//        S_COUNT
+//    };
+//    Q_ENUM(Sizes)
     
     explicit QtYandexAdsBannerInterface(QObject *parent = nullptr);
     virtual ~QtYandexAdsBannerInterface() = default;
@@ -34,10 +34,11 @@ public:
     virtual bool setUnitId(const QString& unitId);
     virtual const QString& unitId() const = 0;
     
-    virtual bool setSize(Sizes size);
-    virtual Sizes size() const = 0;
-    virtual QSize sizeInPixels() = 0;
+    virtual bool initializeSizeUsingNative() = 0;
+    virtual bool setSize(const QSize &size);
+    virtual const QSize& size() const = 0;
     
+    virtual bool initializePositionUsingNative() = 0;
     virtual bool setPosition(const QPoint& position);
     virtual const QPoint& position() const = 0;
     
@@ -55,7 +56,7 @@ signals:
     
 protected:
     QString m_unitId;
-    Sizes   m_size;
+    QSize   m_size;
     QPoint  m_position;
 };
 

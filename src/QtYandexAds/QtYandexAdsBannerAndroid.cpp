@@ -76,35 +76,19 @@ std::shared_ptr<QtYandexAdsBannerAndroid> QtYandexAdsBannerAndroid::generateInst
     
     // position init:
     
-    QAndroidJniObject jPositionObj{QAndroidJniObject::callStaticObjectMethod("org.test.QtYandexAds/QtYandexAdsActivity", "GetAdBannerPosition", "(I)[I", static_cast<jint>(newInstance->m_bannerId))};    
-    
-    if (!jPositionObj.isValid()) {
+    if (!newInstance->initializePositionUsingNative()) {
         m_instances->remove(newInstance->m_bannerId);
-        
+                
         return std::shared_ptr<QtYandexAdsBannerAndroid>();
     }
     
-    jintArray jPosition{jPositionObj.object<jintArray>()};
+    // size init:
     
-    QAndroidJniEnvironment env{};
-    
-    if (env->ExceptionCheck()) {
+    if (!newInstance->initializeSizeUsingNative()) {
         m_instances->remove(newInstance->m_bannerId);
-        
+                
         return std::shared_ptr<QtYandexAdsBannerAndroid>();
     }
-    
-    jint* position{env->GetIntArrayElements(jPosition, 0)};
-    
-    if (!position) {
-        m_instances->remove(newInstance->m_bannerId);
-        
-        return std::shared_ptr<QtYandexAdsBannerAndroid>();
-    }
-    
-    QPoint positionPoint{position[0], position[1]};
-    
-    newInstance->initializePosition(positionPoint);
     
     qInfo() << "QtYandexAdsBannerAndroid::generateInstance() ended";
     
@@ -191,35 +175,76 @@ const QString &QtYandexAdsBannerAndroid::unitId() const
     return m_unitId;
 }
 
-bool QtYandexAdsBannerAndroid::setSize(Sizes size)
+bool QtYandexAdsBannerAndroid::initializeSizeUsingNative()
+{
+    if (m_size.isValid()) return false;
+    
+    QAndroidJniObject jSizeObj{QAndroidJniObject::callStaticObjectMethod("org.test.QtYandexAds/QtYandexAdsActivity", "GetAdBannerSize", "(I)[I", static_cast<jint>(m_bannerId))};    
+    
+    if (!jSizeObj.isValid()) return false;
+    
+    jintArray jSize{jSizeObj.object<jintArray>()};
+    
+    QAndroidJniEnvironment env{};
+    
+    if (env->ExceptionCheck()) return false;
+    
+    jint* size{env->GetIntArrayElements(jSize, 0)};
+    
+    if (!size) return false;
+    
+    QSize sizeObj{size[0], size[1]};
+    
+    qInfo() << "SizeNative: " << sizeObj;
+    
+    return QtYandexAdsBannerInterface::setSize(sizeObj);
+}
+
+bool QtYandexAdsBannerAndroid::setSize(const QSize &size)
 {
     if (!isValid()) return false;
     if (!QtYandexAdsBannerInterface::setSize(size)) 
         return false;
     
-    QAndroidJniObject::callStaticMethod<void>("org.test.QtYandexAds/QtYandexAdsActivity", "SetAdBannerSize", "(II)V", static_cast<jint>(m_bannerId), static_cast<jint>(size));    
+    QAndroidJniObject::callStaticMethod<void>("org.test.QtYandexAds/QtYandexAdsActivity", "SetAdBannerSize", "(III)V", static_cast<jint>(m_bannerId), static_cast<jint>(size.width()), static_cast<jint>(size.height()));    
 
     return true;
 }
 
-QtYandexAdsBannerInterface::Sizes QtYandexAdsBannerAndroid::size() const
+const QSize& QtYandexAdsBannerAndroid::size() const
 {
     return m_size;
 }
 
-QSize QtYandexAdsBannerAndroid::sizeInPixels()
-{
-    int width {QAndroidJniObject::callStaticMethod<jint>("org.test.QtYandexAds/QtYandexAdsActivity", "GetAdBannerWidth", "(I)I", static_cast<jint>(m_bannerId))};    
-    int height{QAndroidJniObject::callStaticMethod<jint>("org.test.QtYandexAds/QtYandexAdsActivity", "GetAdBannerHeight", "(I)I", static_cast<jint>(m_bannerId))};
+//QSize QtYandexAdsBannerAndroid::sizeInPixels()
+//{
+//    int width {QAndroidJniObject::callStaticMethod<jint>("org.test.QtYandexAds/QtYandexAdsActivity", "GetAdBannerWidth", "(I)I", static_cast<jint>(m_bannerId))};    
+//    int height{QAndroidJniObject::callStaticMethod<jint>("org.test.QtYandexAds/QtYandexAdsActivity", "GetAdBannerHeight", "(I)I", static_cast<jint>(m_bannerId))};
    
-    return QSize(width, height);
-}
+//    return QSize(width, height);
+//}
 
-bool QtYandexAdsBannerAndroid::initializePosition(const QPoint &position)
+bool QtYandexAdsBannerAndroid::initializePositionUsingNative()
 {
     if (!m_position.isNull()) return false;
     
-    return QtYandexAdsBannerInterface::setPosition(position);
+    QAndroidJniObject jPositionObj{QAndroidJniObject::callStaticObjectMethod("org.test.QtYandexAds/QtYandexAdsActivity", "GetAdBannerPosition", "(I)[I", static_cast<jint>(m_bannerId))};    
+    
+    if (!jPositionObj.isValid()) return false;
+        
+    jintArray jPosition{jPositionObj.object<jintArray>()};
+    
+    QAndroidJniEnvironment env{};
+    
+    if (env->ExceptionCheck()) return false;
+    
+    jint* position{env->GetIntArrayElements(jPosition, 0)};
+    
+    if (!position) return false;
+    
+    QPoint positionPoint{position[0], position[1]};
+    
+    return QtYandexAdsBannerInterface::setPosition(positionPoint);
 }
 
 bool QtYandexAdsBannerAndroid::setPosition(const QPoint &position)
@@ -326,6 +351,8 @@ void QtYandexAdsBannerAndroid::processBannerClicked(JNIEnv *env, jobject thiz, c
 
 void QtYandexAdsBannerAndroid::processBannerLoadFail(JNIEnv *env, jobject thiz, const jint bannerId, const jint rawErrorCode)
 {
+    qInfo() << "Error occured. Code: " << rawErrorCode;
+    
     auto curBannerInstance = getInstanceByJavaObjectIdWithCheck(env, thiz, bannerId);
     
     emit curBannerInstance->errorOccured(getAdErrorByErrorCode(static_cast<ErrorCode>(rawErrorCode)));

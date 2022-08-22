@@ -12,20 +12,18 @@ Window {
     title: qsTr("Hello World")
     
     YandexAdsBanner {
-        unitId: "R-M-DEMO-300x100"
-        size: YandexAdsBannerBase.S_MEDIUM_HORIZONTAL
         
         Component.onCompleted: {
             console.log("Yandex banner #1 has been created! Pos: " + x + ':' + y);
         }
     }
     
-//    YandexAdsBanner {
-//        x: 0
-//        y: 600
+    YandexAdsBanner {
+        x: 0
+        y: 600
         
-//        Component.onCompleted: {
-//            console.log("Yandex banner #2 has been created! Pos: " + x + ':' + y);
-//        }
-//    }
+        Component.onCompleted: {
+            console.log("Yandex banner #2 has been created! Pos: " + x + ':' + y);
+        }
+    }
 }

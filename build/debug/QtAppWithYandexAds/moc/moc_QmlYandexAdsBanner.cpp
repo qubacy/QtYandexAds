@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QmlYandexAdsBanner_t {
-    QByteArrayData data[24];
-    char stringdata0[234];
+    QByteArrayData data[21];
+    char stringdata0[182];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -46,25 +46,20 @@ QT_MOC_LITERAL(10, 107, 12), // "errorOccured"
 QT_MOC_LITERAL(11, 120, 7), // "AdError"
 QT_MOC_LITERAL(12, 128, 3), // "err"
 QT_MOC_LITERAL(13, 132, 6), // "unitId"
-QT_MOC_LITERAL(14, 139, 4), // "size"
-QT_MOC_LITERAL(15, 144, 33), // "QtYandexAdsBannerInterface::S..."
-QT_MOC_LITERAL(16, 178, 12), // "sizeInPixels"
-QT_MOC_LITERAL(17, 191, 5), // "width"
-QT_MOC_LITERAL(18, 197, 6), // "height"
-QT_MOC_LITERAL(19, 204, 8), // "position"
-QT_MOC_LITERAL(20, 213, 1), // "x"
-QT_MOC_LITERAL(21, 215, 1), // "y"
-QT_MOC_LITERAL(22, 217, 7), // "visible"
-QT_MOC_LITERAL(23, 225, 8) // "isLoaded"
+QT_MOC_LITERAL(14, 139, 5), // "width"
+QT_MOC_LITERAL(15, 145, 6), // "height"
+QT_MOC_LITERAL(16, 152, 8), // "position"
+QT_MOC_LITERAL(17, 161, 1), // "x"
+QT_MOC_LITERAL(18, 163, 1), // "y"
+QT_MOC_LITERAL(19, 165, 7), // "visible"
+QT_MOC_LITERAL(20, 173, 8) // "isLoaded"
 
     },
     "QmlYandexAdsBanner\0unitIdChanged\0\0"
     "sizeChanged\0positionChanged\0visibleChanged\0"
     "loaded\0loading\0closed\0clicked\0"
-    "errorOccured\0AdError\0err\0unitId\0size\0"
-    "QtYandexAdsBannerInterface::Sizes\0"
-    "sizeInPixels\0width\0height\0position\0x\0"
-    "y\0visible\0isLoaded"
+    "errorOccured\0AdError\0err\0unitId\0width\0"
+    "height\0position\0x\0y\0visible\0isLoaded"
 };
 #undef QT_MOC_LITERAL
 
@@ -75,7 +70,7 @@ static const uint qt_meta_data_QmlYandexAdsBanner[] = {
        0,       // classname
        0,    0, // classinfo
        9,   14, // methods
-      10,   78, // properties
+       8,   78, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -105,20 +100,16 @@ static const uint qt_meta_data_QmlYandexAdsBanner[] = {
 
  // properties: name, type, flags
       13, QMetaType::QString, 0x00495103,
-      14, 0x80000000 | 15, 0x0049510b,
-      16, QMetaType::QSize, 0x00495001,
-      17, QMetaType::Int, 0x00495001,
-      18, QMetaType::Int, 0x00495001,
-      19, QMetaType::QPoint, 0x00495103,
-      20, QMetaType::Int, 0x00495103,
-      21, QMetaType::Int, 0x00495103,
-      22, QMetaType::Bool, 0x00495103,
-      23, QMetaType::Bool, 0x00495001,
+      14, QMetaType::Int, 0x00495103,
+      15, QMetaType::Int, 0x00495103,
+      16, QMetaType::QPoint, 0x00495103,
+      17, QMetaType::Int, 0x00495103,
+      18, QMetaType::Int, 0x00495103,
+      19, QMetaType::Bool, 0x00495103,
+      20, QMetaType::Bool, 0x00495001,
 
  // properties: notify_signal_id
        0,
-       1,
-       1,
        1,
        1,
        2,
@@ -231,15 +222,13 @@ void QmlYandexAdsBanner::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         void *_v = _a[0];
         switch (_id) {
         case 0: *reinterpret_cast< QString*>(_v) = _t->unitId(); break;
-        case 1: *reinterpret_cast< QtYandexAdsBannerInterface::Sizes*>(_v) = _t->size(); break;
-        case 2: *reinterpret_cast< QSize*>(_v) = _t->sizeInPixels(); break;
-        case 3: *reinterpret_cast< int*>(_v) = _t->width(); break;
-        case 4: *reinterpret_cast< int*>(_v) = _t->height(); break;
-        case 5: *reinterpret_cast< QPoint*>(_v) = _t->position(); break;
-        case 6: *reinterpret_cast< int*>(_v) = _t->x(); break;
-        case 7: *reinterpret_cast< int*>(_v) = _t->y(); break;
-        case 8: *reinterpret_cast< bool*>(_v) = _t->visible(); break;
-        case 9: *reinterpret_cast< bool*>(_v) = _t->isLoaded(); break;
+        case 1: *reinterpret_cast< int*>(_v) = _t->width(); break;
+        case 2: *reinterpret_cast< int*>(_v) = _t->height(); break;
+        case 3: *reinterpret_cast< QPoint*>(_v) = _t->position(); break;
+        case 4: *reinterpret_cast< int*>(_v) = _t->x(); break;
+        case 5: *reinterpret_cast< int*>(_v) = _t->y(); break;
+        case 6: *reinterpret_cast< bool*>(_v) = _t->visible(); break;
+        case 7: *reinterpret_cast< bool*>(_v) = _t->isLoaded(); break;
         default: break;
         }
     } else if (_c == QMetaObject::WriteProperty) {
@@ -248,11 +237,12 @@ void QmlYandexAdsBanner::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         void *_v = _a[0];
         switch (_id) {
         case 0: _t->setUnitId(*reinterpret_cast< QString*>(_v)); break;
-        case 1: _t->setSize(*reinterpret_cast< QtYandexAdsBannerInterface::Sizes*>(_v)); break;
-        case 5: _t->setPosition(*reinterpret_cast< QPoint*>(_v)); break;
-        case 6: _t->setX(*reinterpret_cast< int*>(_v)); break;
-        case 7: _t->setY(*reinterpret_cast< int*>(_v)); break;
-        case 8: _t->setVisible(*reinterpret_cast< bool*>(_v)); break;
+        case 1: _t->setWidth(*reinterpret_cast< int*>(_v)); break;
+        case 2: _t->setHeight(*reinterpret_cast< int*>(_v)); break;
+        case 3: _t->setPosition(*reinterpret_cast< QPoint*>(_v)); break;
+        case 4: _t->setX(*reinterpret_cast< int*>(_v)); break;
+        case 5: _t->setY(*reinterpret_cast< int*>(_v)); break;
+        case 6: _t->setVisible(*reinterpret_cast< bool*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -260,17 +250,12 @@ void QmlYandexAdsBanner::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
 #endif // QT_NO_PROPERTIES
 }
 
-static const QMetaObject::SuperData qt_meta_extradata_QmlYandexAdsBanner[] = {
-    QMetaObject::SuperData::link<QtYandexAdsBannerInterface::staticMetaObject>(),
-    nullptr
-};
-
 QT_INIT_METAOBJECT const QMetaObject QmlYandexAdsBanner::staticMetaObject = { {
     QMetaObject::SuperData::link<QObject::staticMetaObject>(),
     qt_meta_stringdata_QmlYandexAdsBanner.data,
     qt_meta_data_QmlYandexAdsBanner,
     qt_static_metacall,
-    qt_meta_extradata_QmlYandexAdsBanner,
+    nullptr,
     nullptr
 } };
 
@@ -306,17 +291,17 @@ int QmlYandexAdsBanner::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 8;
     } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 10;
+        _id -= 8;
     } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 10;
+        _id -= 8;
     } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 10;
+        _id -= 8;
     } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 10;
+        _id -= 8;
     } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 10;
+        _id -= 8;
     }
 #endif // QT_NO_PROPERTIES
     return _id;

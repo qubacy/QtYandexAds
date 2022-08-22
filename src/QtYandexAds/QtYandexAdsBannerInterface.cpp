@@ -3,7 +3,7 @@
 QtYandexAdsBannerInterface::QtYandexAdsBannerInterface(QObject *parent)
     : QObject {parent},
       m_unitId  {QString{}},
-      m_size    {Sizes::S_SMALL_HORIZONTAL},
+      m_size    {QSize{}},
       m_position{QPoint{}}
 {
     
@@ -18,10 +18,9 @@ bool QtYandexAdsBannerInterface::setUnitId(const QString &unitId)
     return true;
 }
 
-bool QtYandexAdsBannerInterface::setSize(Sizes size)
+bool QtYandexAdsBannerInterface::setSize(const QSize& size)
 {
-    if (size >= Sizes::S_COUNT || size <= Sizes::S_INVALID)
-        return false;
+    if (!size.isValid()) return false;
     
     m_size = size;
     
