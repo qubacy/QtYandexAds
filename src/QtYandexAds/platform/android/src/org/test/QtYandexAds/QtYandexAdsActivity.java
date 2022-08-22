@@ -276,15 +276,29 @@ public class QtYandexAdsActivity extends QtActivity {
 
         m_Instance.m_BannerAdUnitId = adId;
 
-        for (int i = 0; i < m_Instance.m_BannerList.size(); ++i) {
-            QtYandexAdsBanner curBanner = m_Instance.m_BannerList.get(i);
+        AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
 
-            if (curBanner == null) return;
-
-            if (!curBanner.ProcessNewAdBannerUnitId()) {
-                onBannerLoadFail(curBanner.GetBannerId(), AdRequestError.Code.SYSTEM_ERROR);
+        m_Instance.runOnUiThread(new Runnable() {
+            public void run() {
+                for (int i = 0; i < m_Instance.m_BannerList.size(); ++i) {
+                    QtYandexAdsBanner curBanner = m_Instance.m_BannerList.get(i);
+        
+                    if (curBanner == null) {
+                        isOnWaitingForUiThread.set(false);
+                        
+                        return;
+                    }
+        
+                    if (!curBanner.ProcessNewAdBannerUnitId()) {
+                        onBannerLoadFail(curBanner.GetBannerId(), AdRequestError.Code.SYSTEM_ERROR);
+                    }
+                }
+            
+                isOnWaitingForUiThread.set(false);
             }
-        }
+        });
+    
+        while (isOnWaitingForUiThread.get()) { }
     }
 
     public static String GetBannerAdUnitId() {
@@ -296,13 +310,25 @@ public class QtYandexAdsActivity extends QtActivity {
     public static void SetAdBannerSize(final int bannerId, final int width, final int height) {
         QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
 
-        if (curBanner == null) return;
+        if (curBanner == null)  return;
+        if (m_Instance == null) return;
+        
+        AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
 
-        if (!curBanner.SetAdBannerSize(width, height)) {
-            // FIXME: HANDLE ERROR CASE
+        m_Instance.runOnUiThread(new Runnable() {
+            public void run() {
+                if (!curBanner.SetAdBannerSize(width, height)) {
+                    onBannerLoadFail(curBanner.GetBannerId(), AdRequestError.Code.SYSTEM_ERROR);            
+                    isOnWaitingForUiThread.set(false);
+                    
+                    return;
+                }
             
-            onBannerLoadFail(curBanner.GetBannerId(), AdRequestError.Code.SYSTEM_ERROR);            
-        }
+                isOnWaitingForUiThread.set(false);
+            }
+        });
+    
+        while (isOnWaitingForUiThread.get()) { }
     }
 
     public static int[] GetAdBannerSize(final int bannerId) {

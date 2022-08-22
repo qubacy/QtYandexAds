@@ -19,7 +19,6 @@ QmlYandexAdsBanner::QmlYandexAdsBanner(QObject *parent)
 void QmlYandexAdsBanner::declareQML()
 {
     qmlRegisterType<QmlYandexAdsBanner>("com.test.QmlYandexAdsBanner", 1, 0, "YandexAdsBanner");
-    qmlRegisterUncreatableType<QtYandexAdsBannerInterface>("com.test.QmlYandexAdsBannerBase", 1, 0, "YandexAdsBannerBase", "");
     qRegisterMetaType<AdError>("AdError");
 }
 

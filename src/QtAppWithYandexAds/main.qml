@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 
 import com.test.QmlYandexAdsBanner 1.0
-import com.test.QmlYandexAdsBannerBase 1.0
 
 Window {
     width: 640
@@ -12,6 +11,7 @@ Window {
     title: qsTr("Hello World")
     
     YandexAdsBanner {
+        visible: false
         
         Component.onCompleted: {
             console.log("Yandex banner #1 has been created! Pos: " + x + ':' + y);

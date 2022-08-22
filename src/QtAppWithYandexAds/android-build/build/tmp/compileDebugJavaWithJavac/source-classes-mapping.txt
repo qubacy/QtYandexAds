@@ -17,8 +17,6 @@ org/test/QtYandexAds/QtYandexAdsBanner.java
  org.test.QtYandexAds.QtYandexAdsBanner
  org.test.QtYandexAds.QtYandexAdsBanner$1
  org.test.QtYandexAds.QtYandexAdsBanner$2
- org.test.QtYandexAds.QtYandexAdsBanner$3
- org.test.QtYandexAds.QtYandexAdsBanner$4
 org/qtproject/qt5/android/bindings/QtActivityLoader.java
  org.qtproject.qt5.android.bindings.QtActivityLoader
  org.qtproject.qt5.android.bindings.QtActivityLoader$1
@@ -42,5 +40,7 @@ org/test/QtYandexAds/QtYandexAdsActivity.java
  org.test.QtYandexAds.QtYandexAdsActivity$3
  org.test.QtYandexAds.QtYandexAdsActivity$4
  org.test.QtYandexAds.QtYandexAdsActivity$5
+ org.test.QtYandexAds.QtYandexAdsActivity$6
+ org.test.QtYandexAds.QtYandexAdsActivity$7
 org/qtproject/qt5/android/bindings/QtServiceLoader.java
  org.qtproject.qt5.android.bindings.QtServiceLoader

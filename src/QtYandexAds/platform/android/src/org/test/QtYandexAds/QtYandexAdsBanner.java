@@ -195,57 +195,24 @@ public class QtYandexAdsBanner {
     public boolean ProcessNewAdBannerUnitId() {
         if (m_BannerView == null) return false;
 
-        AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
-        AtomicBoolean result = new AtomicBoolean(false);
+        Log.d("QtYandexAdsBanner", "ProcessNewAdBannerUnitId(). New unitId: " + m_BannerActivity.GetBannerAdUnitId());
+
+        if (!ResetBanner()) return false;
         
-        m_BannerActivity.runOnUiThread(new Runnable() {
-            public void run() {
-                Log.d("QtYandexAdsBanner", "ProcessNewAdBannerUnitId(). New unitId: " + m_BannerActivity.GetBannerAdUnitId());
-        
-                if (!ResetBanner()) {
-                    isOnWaitingForUiThread.set(false);
-                    
-                    return;
-                }
-                
-                result.set(true);
-                isOnWaitingForUiThread.set(false);
-            }
-        });
-    
-        while (isOnWaitingForUiThread.get()) { }
-        
-        return result.get();
+        return true;
     }
 
     public boolean SetAdBannerSize(final int width, final int height) {
         Log.d("QtYandexAdsBanner", "Banner size changing. Size: " + width + ":" + height);
         
         if (width <= 0 || height <= 0) return false;
-        
-        AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
-        AtomicBoolean result = new AtomicBoolean(false);
-        
-        m_BannerActivity.runOnUiThread(new Runnable() {
-            public void run() {
-                if (m_BannerView == null) return;
-        
-                m_BannerAdSize = AdSize.flexibleSize(width, height);
-        
-                if (!ResetBanner()) {
-                    isOnWaitingForUiThread.set(false);
-                    
-                    return;
-                }
-                
-                result.set(true);
-                isOnWaitingForUiThread.set(false);
-            }
-        });
-    
-        while (isOnWaitingForUiThread.get()) { }
+        if (m_BannerView == null)      return false;
 
-        return result.get();
+        m_BannerAdSize = AdSize.flexibleSize(width, height);
+
+        if (!ResetBanner()) return false;
+                
+        return true;
     }
 
     public boolean SetAdBannerPosition(final int x, final int y) {
