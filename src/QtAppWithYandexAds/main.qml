@@ -18,8 +18,8 @@ Window {
     
     YandexAdsBanner {
         //visible: false
-        verticalAttachment: YandexAdsBannerBase.VA_BOTTOM 
-        horizontalAttachment: YandexAdsBannerBase.HA_CENTER
+//        verticalAttachment: YandexAdsBannerBase.VA_BOTTOM 
+//        horizontalAttachment: YandexAdsBannerBase.HA_CENTER
         
         Component.onCompleted: {
             console.log("Yandex banner #1 has been created! Pos: " + x + ':' + y);

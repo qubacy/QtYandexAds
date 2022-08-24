@@ -525,9 +525,10 @@ public class QtYandexAdsActivity extends QtActivity {
     public static void SetAdBannerPosition(final int bannerId, final int x, final int y) {
         QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
 
-        if (curBanner == null) return;
-
-        if (!curBanner.SetAdBannerPosition(x, y)) {
+        if (curBanner == null)  return;
+        if (m_Instance == null) return;
+ 
+        if (!curBanner.SetAdBannerPosition(x, y + m_Instance.GetStatusBarHeight())) {
             // FIXME: HANDLE ERROR CASE
         }
     }

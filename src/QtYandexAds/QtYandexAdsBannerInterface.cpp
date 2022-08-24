@@ -29,7 +29,7 @@ bool QtYandexAdsBannerInterface::setSize(const QSize& size)
 
 bool QtYandexAdsBannerInterface::setPosition(const QPoint &position)
 {
-    if (position.isNull()) return false;
+//    if (position.isNull()) return false;
     
     m_position = position;
     
