@@ -35,3 +35,13 @@ bool QtYandexAdsBannerInterface::setPosition(const QPoint &position)
     
     return true;
 }
+
+bool QtYandexAdsBannerInterface::setVerticalAttachment(const VerticalAttachment attachment)
+{
+    return (attachment > VerticalAttachment::VA_INVALID && attachment < VerticalAttachment::VA_COUNT);
+}
+
+bool QtYandexAdsBannerInterface::setHorizontalAttachment(const HorizontalAttachment attachment)
+{
+    return (attachment > HorizontalAttachment::HA_INVALID && attachment < HorizontalAttachment::HA_COUNT);    
+}

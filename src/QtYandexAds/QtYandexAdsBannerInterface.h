@@ -26,6 +26,24 @@ public:
 //    };
 //    Q_ENUM(Sizes)
     
+    enum VerticalAttachment : uint8_t {
+        VA_INVALID = 0,
+        VA_TOP,
+        VA_CENTER,
+        VA_BOTTOM,
+        VA_COUNT
+    };
+    Q_ENUM(VerticalAttachment)
+    
+    enum HorizontalAttachment : uint8_t {
+        HA_INVALID = 0,
+        HA_LEFT,
+        HA_CENTER,
+        HA_RIGHT,
+        HA_COUNT
+    };
+    Q_ENUM(HorizontalAttachment)
+    
     explicit QtYandexAdsBannerInterface(QObject *parent = nullptr);
     virtual ~QtYandexAdsBannerInterface() = default;
     
@@ -46,6 +64,9 @@ public:
     virtual bool visible() = 0;
     
     virtual bool isLoaded() = 0;
+    
+    virtual bool setVerticalAttachment(const VerticalAttachment attachment);
+    virtual bool setHorizontalAttachment(const HorizontalAttachment attachment);
     
 signals:
     void loaded ();

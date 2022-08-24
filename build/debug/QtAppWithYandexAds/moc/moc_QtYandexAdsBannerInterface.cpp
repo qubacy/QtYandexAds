@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QtYandexAdsBannerInterface_t {
-    QByteArrayData data[9];
-    char stringdata0[83];
+    QByteArrayData data[21];
+    char stringdata0[217];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,12 +40,27 @@ QT_MOC_LITERAL(4, 43, 6), // "closed"
 QT_MOC_LITERAL(5, 50, 7), // "clicked"
 QT_MOC_LITERAL(6, 58, 12), // "errorOccured"
 QT_MOC_LITERAL(7, 71, 7), // "AdError"
-QT_MOC_LITERAL(8, 79, 3) // "err"
+QT_MOC_LITERAL(8, 79, 3), // "err"
+QT_MOC_LITERAL(9, 83, 18), // "VerticalAttachment"
+QT_MOC_LITERAL(10, 102, 10), // "VA_INVALID"
+QT_MOC_LITERAL(11, 113, 6), // "VA_TOP"
+QT_MOC_LITERAL(12, 120, 9), // "VA_CENTER"
+QT_MOC_LITERAL(13, 130, 9), // "VA_BOTTOM"
+QT_MOC_LITERAL(14, 140, 8), // "VA_COUNT"
+QT_MOC_LITERAL(15, 149, 20), // "HorizontalAttachment"
+QT_MOC_LITERAL(16, 170, 10), // "HA_INVALID"
+QT_MOC_LITERAL(17, 181, 7), // "HA_LEFT"
+QT_MOC_LITERAL(18, 189, 9), // "HA_CENTER"
+QT_MOC_LITERAL(19, 199, 8), // "HA_RIGHT"
+QT_MOC_LITERAL(20, 208, 8) // "HA_COUNT"
 
     },
     "QtYandexAdsBannerInterface\0loaded\0\0"
     "loading\0closed\0clicked\0errorOccured\0"
-    "AdError\0err"
+    "AdError\0err\0VerticalAttachment\0"
+    "VA_INVALID\0VA_TOP\0VA_CENTER\0VA_BOTTOM\0"
+    "VA_COUNT\0HorizontalAttachment\0HA_INVALID\0"
+    "HA_LEFT\0HA_CENTER\0HA_RIGHT\0HA_COUNT"
 };
 #undef QT_MOC_LITERAL
 
@@ -57,7 +72,7 @@ static const uint qt_meta_data_QtYandexAdsBannerInterface[] = {
        0,    0, // classinfo
        5,   14, // methods
        0,    0, // properties
-       0,    0, // enums/sets
+       2,   46, // enums/sets
        0,    0, // constructors
        0,       // flags
        5,       // signalCount
@@ -75,6 +90,22 @@ static const uint qt_meta_data_QtYandexAdsBannerInterface[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 7,    8,
+
+ // enums: name, alias, flags, count, data
+       9,    9, 0x0,    5,   56,
+      15,   15, 0x0,    5,   66,
+
+ // enum data: key, value
+      10, uint(QtYandexAdsBannerInterface::VA_INVALID),
+      11, uint(QtYandexAdsBannerInterface::VA_TOP),
+      12, uint(QtYandexAdsBannerInterface::VA_CENTER),
+      13, uint(QtYandexAdsBannerInterface::VA_BOTTOM),
+      14, uint(QtYandexAdsBannerInterface::VA_COUNT),
+      16, uint(QtYandexAdsBannerInterface::HA_INVALID),
+      17, uint(QtYandexAdsBannerInterface::HA_LEFT),
+      18, uint(QtYandexAdsBannerInterface::HA_CENTER),
+      19, uint(QtYandexAdsBannerInterface::HA_RIGHT),
+      20, uint(QtYandexAdsBannerInterface::HA_COUNT),
 
        0        // eod
 };

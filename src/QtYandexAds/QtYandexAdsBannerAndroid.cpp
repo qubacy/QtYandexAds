@@ -293,6 +293,28 @@ bool QtYandexAdsBannerAndroid::isLoaded()
     return isLoaded;
 }
 
+bool QtYandexAdsBannerAndroid::setVerticalAttachment(const VerticalAttachment attachment)
+{
+    if (!isValid()) return false;
+    if (!QtYandexAdsBannerInterface::setVerticalAttachment(attachment))
+        return false;
+    
+    QAndroidJniObject::callStaticMethod<void>("org.test.QtYandexAds/QtYandexAdsActivity", "SetVerticalAlignment", "(II)V", static_cast<jint>(m_bannerId), static_cast<jint>(attachment));
+    
+    return true;
+}
+
+bool QtYandexAdsBannerAndroid::setHorizontalAttachment(const HorizontalAttachment attachment)
+{
+    if (!isValid()) return false;
+    if (!QtYandexAdsBannerInterface::setHorizontalAttachment(attachment))
+        return false;
+    
+    QAndroidJniObject::callStaticMethod<void>("org.test.QtYandexAds/QtYandexAdsActivity", "SetHorizontalAlignment", "(II)V", static_cast<jint>(m_bannerId), static_cast<jint>(attachment));
+    
+    return true;
+}
+
 QtYandexAdsBannerAndroid::BannerId QtYandexAdsBannerAndroid::getBannerId() const
 {
     return m_bannerId;

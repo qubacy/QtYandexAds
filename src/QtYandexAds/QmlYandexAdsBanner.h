@@ -18,7 +18,9 @@ class QmlYandexAdsBanner : public QObject
     Q_PROPERTY(int y READ y WRITE setY NOTIFY positionChanged)
     Q_PROPERTY(bool visible READ visible WRITE  setVisible NOTIFY visibleChanged)
     Q_PROPERTY(bool isLoaded READ isLoaded NOTIFY loaded)
-
+    Q_PROPERTY(QtYandexAdsBannerInterface::VerticalAttachment verticalAttachment WRITE setVerticalAttachment)
+    Q_PROPERTY(QtYandexAdsBannerInterface::HorizontalAttachment horizontalAttachment WRITE setHorizontalAttachment)
+    
     Q_OBJECT
 public:
     explicit QmlYandexAdsBanner(QObject *parent = nullptr);
@@ -50,6 +52,9 @@ public:
 
     void setVisible(bool isVisible);
     bool visible();
+    
+    void setVerticalAttachment  (const QtYandexAdsBannerInterface::VerticalAttachment attachment);
+    void setHorizontalAttachment(const QtYandexAdsBannerInterface::HorizontalAttachment attachment);
 
     bool isLoaded();
 

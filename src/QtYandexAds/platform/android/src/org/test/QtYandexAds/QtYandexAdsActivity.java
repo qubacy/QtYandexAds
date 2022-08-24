@@ -14,6 +14,16 @@ import java.util.LinkedList;
 import android.widget.FrameLayout;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
+import android.graphics.Point;
+import android.view.WindowManager;
+import android.content.Context;
+import android.view.Display;
+import android.util.DisplayMetrics;
+//import android.view.ViewConfiguration;
+//import android.view.KeyEvent;
+//import android.view.KeyCharacterMap;
+//import android.content.res.Resources;
+//import android.content.res.Configuration;
 
 import com.yandex.mobile.ads.common.InitializationListener;
 import com.yandex.mobile.ads.common.MobileAds;
@@ -107,6 +117,175 @@ public class QtYandexAdsActivity extends QtActivity {
         });
     }
 
+    public static void SetVerticalAlignment(final int bannerId, final int verticalAlignment) {
+        if (m_Instance == null) {
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+        
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
+
+        if (curBanner == null) {
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+        
+        Point actualAppPoint = m_Instance.GetActualAppSize();
+        
+        if (actualAppPoint == null) {
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+        
+        int actualAppHeight = actualAppPoint.y - curBanner.GetAdBannerHeight();
+        
+        if (actualAppHeight < 0) {
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+    
+        boolean result = false;
+        
+        switch (verticalAlignment) {
+            case 1: {
+                result = curBanner.SetAdBannerPosition(curBanner.GetAdBannerX(), m_Instance.GetStatusBarHeight());
+                    
+                break;
+            } // top
+            case 2: { 
+                int midBannerY = actualAppHeight / 2 + curBanner.GetAdBannerHeight() / 2 - m_Instance.GetStatusBarHeight() / 2;
+                
+                result = curBanner.SetAdBannerPosition(curBanner.GetAdBannerX(), midBannerY);                
+                
+                break;
+            } // center
+            case 3: {
+                result = curBanner.SetAdBannerPosition(curBanner.GetAdBannerX(), actualAppHeight);                
+                
+                break;
+            } // bottom
+        }
+        
+        if (!result)
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+    }
+
+    public static void SetHorizontalAlignment(final int bannerId, final int horizontalAlignment) {
+        if (m_Instance == null) {
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+        
+        QtYandexAdsBanner curBanner = GetAdBannerById(bannerId);
+    
+        if (curBanner == null) {
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+        
+        Point actualAppPoint = m_Instance.GetActualAppSize();
+        
+        if (actualAppPoint == null) {
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+        
+        int actualAppWidth = actualAppPoint.x;
+        
+        if (actualAppWidth < 0) {
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+    
+        boolean result = false;
+        
+        switch (horizontalAlignment) {
+            case 1: {
+                result = curBanner.SetAdBannerPosition(0, curBanner.GetAdBannerY());
+                    
+                break;
+            } // right
+            case 2: { 
+                int midBannerX = actualAppWidth / 2 - curBanner.GetAdBannerWidth() / 2;
+                
+                result = curBanner.SetAdBannerPosition(midBannerX, curBanner.GetAdBannerY());                
+                
+                break;
+            } // center
+            case 3: {
+                int leftBannerX = actualAppWidth - curBanner.GetAdBannerWidth();
+                
+                result = curBanner.SetAdBannerPosition(leftBannerX, curBanner.GetAdBannerY());                
+                
+                break;
+            } // left
+        }
+        
+        if (!result)
+            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+     }
+
+    private Point GetActualAppSize() {
+        WindowManager windowManager = (WindowManager) this.getSystemService(Context.WINDOW_SERVICE);
+        
+        if (windowManager == null) return null;
+        
+        Display display = windowManager.getDefaultDisplay();
+        Point size = new Point();
+        
+        display.getSize(size);
+        
+        Log.d(YANDEX_MOBILE_ADS_TAG, "actual size: " + size);
+        
+        size.y += GetStatusBarHeight();
+        
+        Log.d(YANDEX_MOBILE_ADS_TAG, "result app size: " + size);
+        
+        return size;
+    }
+
+//    private int GetNavBarHeight() {
+//         int result = 0;
+         
+//         boolean hasMenuKey = ViewConfiguration.get(this).hasPermanentMenuKey();
+//         boolean hasBackKey = KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_BACK);
+
+//         if(!hasMenuKey && !hasBackKey) {
+//             Resources resources = this.getResources();
+
+//             int orientation = resources.getConfiguration().orientation;
+//             int resourceId;
+             
+//             if (IsTablet()){
+//                 resourceId = resources.getIdentifier(orientation == Configuration.ORIENTATION_PORTRAIT ? "navigation_bar_height" : "navigation_bar_height_landscape", "dimen", "android");
+//             }  else {
+//                 resourceId = resources.getIdentifier(orientation == Configuration.ORIENTATION_PORTRAIT ? "navigation_bar_height" : "navigation_bar_width", "dimen", "android");     
+//             }
+
+//             if (resourceId > 0) {
+//                 result = resources.getDimensionPixelSize(resourceId);
+//             }
+//         }
+     
+//         Log.d(YANDEX_MOBILE_ADS_TAG, "navbar height: " + result);     
+        
+//         return result;
+//    } 
+    
+//    private boolean IsTablet() {
+//        return (getResources().getConfiguration().screenLayout
+//                & Configuration.SCREENLAYOUT_SIZE_MASK)
+//                >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+//    }
+
     private int GetStatusBarHeight() {
         
         AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
@@ -132,6 +311,8 @@ public class QtYandexAdsActivity extends QtActivity {
                 //Log.d(YANDEX_MOBILE_ADS_TAG, statusBarHeight + ";" + contentViewTop + ";" + titleBarHeight);
         
                 //result.set(titleBarHeight);
+                Log.d(YANDEX_MOBILE_ADS_TAG, "status bar height: " + contentViewTop);
+                
                 result.set(contentViewTop);
                 
                 isOnWaitingForUiThread.set(false);

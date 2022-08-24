@@ -60,6 +60,9 @@ public:
     
     virtual bool isLoaded() override;
     
+    virtual bool setVerticalAttachment(const VerticalAttachment attachment) override;
+    virtual bool setHorizontalAttachment(const HorizontalAttachment attachment) override;
+    
     BannerId getBannerId() const;
     
 private:

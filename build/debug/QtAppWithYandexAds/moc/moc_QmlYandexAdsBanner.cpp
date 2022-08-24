@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_QmlYandexAdsBanner_t {
-    QByteArrayData data[21];
-    char stringdata0[182];
+    QByteArrayData data[25];
+    char stringdata0[318];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -52,14 +52,22 @@ QT_MOC_LITERAL(16, 152, 8), // "position"
 QT_MOC_LITERAL(17, 161, 1), // "x"
 QT_MOC_LITERAL(18, 163, 1), // "y"
 QT_MOC_LITERAL(19, 165, 7), // "visible"
-QT_MOC_LITERAL(20, 173, 8) // "isLoaded"
+QT_MOC_LITERAL(20, 173, 8), // "isLoaded"
+QT_MOC_LITERAL(21, 182, 18), // "verticalAttachment"
+QT_MOC_LITERAL(22, 201, 46), // "QtYandexAdsBannerInterface::V..."
+QT_MOC_LITERAL(23, 248, 20), // "horizontalAttachment"
+QT_MOC_LITERAL(24, 269, 48) // "QtYandexAdsBannerInterface::H..."
 
     },
     "QmlYandexAdsBanner\0unitIdChanged\0\0"
     "sizeChanged\0positionChanged\0visibleChanged\0"
     "loaded\0loading\0closed\0clicked\0"
     "errorOccured\0AdError\0err\0unitId\0width\0"
-    "height\0position\0x\0y\0visible\0isLoaded"
+    "height\0position\0x\0y\0visible\0isLoaded\0"
+    "verticalAttachment\0"
+    "QtYandexAdsBannerInterface::VerticalAttachment\0"
+    "horizontalAttachment\0"
+    "QtYandexAdsBannerInterface::HorizontalAttachment"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,7 +78,7 @@ static const uint qt_meta_data_QmlYandexAdsBanner[] = {
        0,       // classname
        0,    0, // classinfo
        9,   14, // methods
-       8,   78, // properties
+      10,   78, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
@@ -107,6 +115,8 @@ static const uint qt_meta_data_QmlYandexAdsBanner[] = {
       18, QMetaType::Int, 0x00495103,
       19, QMetaType::Bool, 0x00495103,
       20, QMetaType::Bool, 0x00495001,
+      21, 0x80000000 | 22, 0x0009510a,
+      23, 0x80000000 | 24, 0x0009510a,
 
  // properties: notify_signal_id
        0,
@@ -117,6 +127,8 @@ static const uint qt_meta_data_QmlYandexAdsBanner[] = {
        2,
        3,
        4,
+       0,
+       0,
 
        0        // eod
 };
@@ -243,6 +255,8 @@ void QmlYandexAdsBanner::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         case 4: _t->setX(*reinterpret_cast< int*>(_v)); break;
         case 5: _t->setY(*reinterpret_cast< int*>(_v)); break;
         case 6: _t->setVisible(*reinterpret_cast< bool*>(_v)); break;
+        case 8: _t->setVerticalAttachment(*reinterpret_cast< QtYandexAdsBannerInterface::VerticalAttachment*>(_v)); break;
+        case 9: _t->setHorizontalAttachment(*reinterpret_cast< QtYandexAdsBannerInterface::HorizontalAttachment*>(_v)); break;
         default: break;
         }
     } else if (_c == QMetaObject::ResetProperty) {
@@ -250,12 +264,17 @@ void QmlYandexAdsBanner::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
 #endif // QT_NO_PROPERTIES
 }
 
+static const QMetaObject::SuperData qt_meta_extradata_QmlYandexAdsBanner[] = {
+    QMetaObject::SuperData::link<QtYandexAdsBannerInterface::staticMetaObject>(),
+    nullptr
+};
+
 QT_INIT_METAOBJECT const QMetaObject QmlYandexAdsBanner::staticMetaObject = { {
     QMetaObject::SuperData::link<QObject::staticMetaObject>(),
     qt_meta_stringdata_QmlYandexAdsBanner.data,
     qt_meta_data_QmlYandexAdsBanner,
     qt_static_metacall,
-    nullptr,
+    qt_meta_extradata_QmlYandexAdsBanner,
     nullptr
 } };
 
@@ -291,17 +310,17 @@ int QmlYandexAdsBanner::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     else if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 10;
     } else if (_c == QMetaObject::QueryPropertyDesignable) {
-        _id -= 8;
+        _id -= 10;
     } else if (_c == QMetaObject::QueryPropertyScriptable) {
-        _id -= 8;
+        _id -= 10;
     } else if (_c == QMetaObject::QueryPropertyStored) {
-        _id -= 8;
+        _id -= 10;
     } else if (_c == QMetaObject::QueryPropertyEditable) {
-        _id -= 8;
+        _id -= 10;
     } else if (_c == QMetaObject::QueryPropertyUser) {
-        _id -= 8;
+        _id -= 10;
     }
 #endif // QT_NO_PROPERTIES
     return _id;

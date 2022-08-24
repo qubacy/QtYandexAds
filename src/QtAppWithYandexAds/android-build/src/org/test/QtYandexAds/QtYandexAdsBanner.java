@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.util.Log;
 import java.util.concurrent.atomic.AtomicBoolean;
+import android.util.DisplayMetrics;
 
 import androidx.annotation.NonNull;
 
@@ -163,15 +164,27 @@ public class QtYandexAdsBanner {
     }
 
     public int GetAdBannerWidth() {
-        if (m_BannerView == null) return -1;
+        if (m_BannerView == null)     return -1;
+        if (m_BannerActivity == null) return -1;
+                
+        int density = (int)(m_BannerActivity.getResources().getDisplayMetrics().density);
+        int width   = (int)(m_BannerAdSize.getWidth(m_BannerActivity) * density);
         
-        return m_BannerAdSize.getWidth(m_BannerActivity);
+        Log.d("QtYandexAdsBanner", "Actual banner width: " + width);
+        
+        return width;
     }
 
     public int GetAdBannerHeight() {
-        if (m_BannerView == null) return -1;
+        if (m_BannerView == null)     return -1;
+        if (m_BannerActivity == null) return -1;
         
-        return  m_BannerAdSize.getHeight(m_BannerActivity);
+        int density = (int)(m_BannerActivity.getResources().getDisplayMetrics().density);
+        int height  = (int)(m_BannerAdSize.getHeight(m_BannerActivity) * density);
+        
+        Log.d("QtYandexAdsBanner", "Actual banner height: " + height);
+        
+        return height;
     }
 
     public int GetAdBannerX() {
@@ -202,11 +215,16 @@ public class QtYandexAdsBanner {
         return true;
     }
 
-    public boolean SetAdBannerSize(final int width, final int height) {
-        Log.d("QtYandexAdsBanner", "Banner size changing. Size: " + width + ":" + height);
+    public boolean SetAdBannerSize(final int widthInPixels, final int heightInPixels) {
+        Log.d("QtYandexAdsBanner", "Banner size changing. Size: " + widthInPixels + ":" + heightInPixels);
         
-        if (width <= 0 || height <= 0) return false;
-        if (m_BannerView == null)      return false;
+        if (widthInPixels <= 0 || heightInPixels <= 0) return false;
+        if (m_BannerActivity == null) return false;
+        if (m_BannerView == null) return false;
+        
+        int density = (int)(m_BannerActivity.getResources().getDisplayMetrics().density);
+        int width   = (int)(widthInPixels / density);
+        int height  = (int)(heightInPixels / density);
 
         m_BannerAdSize = AdSize.flexibleSize(width, height);
 

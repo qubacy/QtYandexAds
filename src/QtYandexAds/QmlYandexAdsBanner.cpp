@@ -18,6 +18,7 @@ QmlYandexAdsBanner::QmlYandexAdsBanner(QObject *parent)
 
 void QmlYandexAdsBanner::declareQML()
 {
+    qmlRegisterUncreatableType<QtYandexAdsBannerInterface>("com.test.QmlYandexAdsBannerBase", 1, 0, "YandexAdsBannerBase", "");
     qmlRegisterType<QmlYandexAdsBanner>("com.test.QmlYandexAdsBanner", 1, 0, "YandexAdsBanner");
     qRegisterMetaType<AdError>("AdError");
 }
@@ -109,6 +110,16 @@ void QmlYandexAdsBanner::setVisible(bool isVisible)
 bool QmlYandexAdsBanner::visible()
 {
     return m_ad->visible();
+}
+
+void QmlYandexAdsBanner::setVerticalAttachment(const QtYandexAdsBannerInterface::VerticalAttachment attachment)
+{
+    emit positionChanged(m_ad->setVerticalAttachment(attachment));
+}
+
+void QmlYandexAdsBanner::setHorizontalAttachment(const QtYandexAdsBannerInterface::HorizontalAttachment attachment)
+{
+    emit positionChanged(m_ad->setHorizontalAttachment(attachment));
 }
 
 bool QmlYandexAdsBanner::isLoaded()
