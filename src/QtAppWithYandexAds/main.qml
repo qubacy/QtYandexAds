@@ -18,20 +18,20 @@ Window {
     
     YandexAdsBanner {
         //visible: false
-//        verticalAttachment: YandexAdsBannerBase.VA_BOTTOM 
-//        horizontalAttachment: YandexAdsBannerBase.HA_CENTER
+        verticalAttachment: YandexAdsBannerBase.VA_BOTTOM 
+        horizontalAttachment: YandexAdsBannerBase.HA_CENTER
         
         Component.onCompleted: {
             console.log("Yandex banner #1 has been created! Pos: " + x + ':' + y);
         }
     }
     
-//    YandexAdsBanner {
-//        x: 0
-//        y: 600
+    YandexAdsBanner {
+        verticalAttachment: YandexAdsBannerBase.VA_TOP 
+        horizontalAttachment: YandexAdsBannerBase.HA_RIGHT
         
-//        Component.onCompleted: {
-//            console.log("Yandex banner #2 has been created! Pos: " + x + ':' + y);
-//        }
-//    }
+        Component.onCompleted: {
+            console.log("Yandex banner #2 has been created! Pos: " + x + ':' + y);
+        }
+    }
 }

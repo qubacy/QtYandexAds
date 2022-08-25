@@ -19,11 +19,7 @@ import android.view.WindowManager;
 import android.content.Context;
 import android.view.Display;
 import android.util.DisplayMetrics;
-//import android.view.ViewConfiguration;
-//import android.view.KeyEvent;
-//import android.view.KeyCharacterMap;
-//import android.content.res.Resources;
-//import android.content.res.Configuration;
+import android.content.res.Configuration;
 
 import com.yandex.mobile.ads.common.InitializationListener;
 import com.yandex.mobile.ads.common.MobileAds;
@@ -46,6 +42,8 @@ public class QtYandexAdsActivity extends QtActivity {
     private static QtYandexAdsActivity m_Instance;
     
     private static boolean m_IsSDKInitialized = false;
+    
+//    private OrientationEventListener m_OrientationListener;
 
     public static boolean CheckIsSDKInitialized() {
         return m_IsSDKInitialized;
@@ -102,6 +100,23 @@ public class QtYandexAdsActivity extends QtActivity {
         super.onCreate(savedInstanceState);
         
         m_Instance = this;
+//        m_OrientationListener = new OrientationEventListener(this) {
+//                public void onOrientationChanged(int orientation) {
+//                    Log.d(YANDEX_MOBILE_ADS_TAG, "Orientation changed: " + orientation);
+                    
+//                    if (orientation >= (90 /*- THRESHOLD*/) && orientation <= (90 /*+ THRESHOLD*/)) {
+//                        // landscape:
+                        
+//                        Log.d(YANDEX_MOBILE_ADS_TAG, "Orientation changed to LANDSCAPE");
+                        
+//                    } else if ((orientation >= (360 /*- THRESHOLD*/) && orientation <= 360) || (orientation >= 0 /*&& orientation <= THRESHOLD*/)) {
+//                        // portrait:
+                        
+//                        Log.d(YANDEX_MOBILE_ADS_TAG, "Orientation changed to PORTRAIT");
+//                    }
+//                }
+//            };
+//        m_OrientationListener.enable();
     
         Log.d(YANDEX_MOBILE_ADS_TAG, "SDK initialization start");
 
@@ -115,6 +130,46 @@ public class QtYandexAdsActivity extends QtActivity {
                 m_IsSDKInitialized = true;
             }
         });
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+    
+        int newOrientation = newConfig.orientation;
+        boolean isLandscape;
+        
+        if (newOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // landscape
+            
+            Log.d(YANDEX_MOBILE_ADS_TAG, "Orientation changed to LANDSCAPE");
+            
+            isLandscape = true;
+            
+        } else {
+            // portrait
+            
+            Log.d(YANDEX_MOBILE_ADS_TAG, "Orientation changed to PORTRAIT");
+            
+            isLandscape = false;
+        }
+    
+        for (int i = 0; i < m_Instance.m_BannerList.size(); ++i) {
+            QtYandexAdsBanner curBanner = m_Instance.m_BannerList.get(i);
+    
+            if (curBanner == null) return;
+    
+            int horizontalAlignment = curBanner.GetHorizontalAlignment();
+            int verticalAlignment   = curBanner.GetVerticalAlignment();
+            
+            if (horizontalAlignment != 0) {
+                curBanner.SetVerticalAlignment(verticalAlignment, isLandscape);
+            }
+        
+            if (verticalAlignment != 0) {
+                curBanner.SetHorizontalAlignment(horizontalAlignment, isLandscape);
+            }
+        }
     }
 
     public static void SetVerticalAlignment(final int bannerId, final int verticalAlignment) {
@@ -131,47 +186,10 @@ public class QtYandexAdsActivity extends QtActivity {
             
             return;
         }
-        
-        Point actualAppPoint = m_Instance.GetActualAppSize();
-        
-        if (actualAppPoint == null) {
-            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
-            
-            return;
-        }
-        
-        int actualAppHeight = actualAppPoint.y - curBanner.GetAdBannerHeight();
-        
-        if (actualAppHeight < 0) {
-            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
-            
-            return;
-        }
     
-        boolean result = false;
+        boolean isLandscape = m_Instance.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ? true : false;
         
-        switch (verticalAlignment) {
-            case 1: {
-                result = curBanner.SetAdBannerPosition(curBanner.GetAdBannerX(), m_Instance.GetStatusBarHeight());
-                    
-                break;
-            } // top
-            case 2: { 
-                int midBannerY = actualAppHeight / 2 + curBanner.GetAdBannerHeight() / 2 - m_Instance.GetStatusBarHeight() / 2;
-                
-                result = curBanner.SetAdBannerPosition(curBanner.GetAdBannerX(), midBannerY);                
-                
-                break;
-            } // center
-            case 3: {
-                result = curBanner.SetAdBannerPosition(curBanner.GetAdBannerX(), actualAppHeight);                
-                
-                break;
-            } // bottom
-        }
-        
-        if (!result)
-            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+        curBanner.SetVerticalAlignment(verticalAlignment, isLandscape);
     }
 
     public static void SetHorizontalAlignment(final int bannerId, final int horizontalAlignment) {
@@ -188,52 +206,13 @@ public class QtYandexAdsActivity extends QtActivity {
             
             return;
         }
-        
-        Point actualAppPoint = m_Instance.GetActualAppSize();
-        
-        if (actualAppPoint == null) {
-            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
-            
-            return;
-        }
-        
-        int actualAppWidth = actualAppPoint.x;
-        
-        if (actualAppWidth < 0) {
-            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
-            
-            return;
-        }
     
-        boolean result = false;
-        
-        switch (horizontalAlignment) {
-            case 1: {
-                result = curBanner.SetAdBannerPosition(0, curBanner.GetAdBannerY());
-                    
-                break;
-            } // right
-            case 2: { 
-                int midBannerX = actualAppWidth / 2 - curBanner.GetAdBannerWidth() / 2;
-                
-                result = curBanner.SetAdBannerPosition(midBannerX, curBanner.GetAdBannerY());                
-                
-                break;
-            } // center
-            case 3: {
-                int leftBannerX = actualAppWidth - curBanner.GetAdBannerWidth();
-                
-                result = curBanner.SetAdBannerPosition(leftBannerX, curBanner.GetAdBannerY());                
-                
-                break;
-            } // left
-        }
-        
-        if (!result)
-            onBannerLoadFail(bannerId, AdRequestError.Code.SYSTEM_ERROR);
+        boolean isLandscape = m_Instance.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ? true : false;
+    
+        curBanner.SetHorizontalAlignment(horizontalAlignment, isLandscape);
      }
 
-    private Point GetActualAppSize() {
+    public Point GetActualAppSize(final boolean isLandscape) {
         WindowManager windowManager = (WindowManager) this.getSystemService(Context.WINDOW_SERVICE);
         
         if (windowManager == null) return null;
@@ -245,9 +224,11 @@ public class QtYandexAdsActivity extends QtActivity {
         
         Log.d(YANDEX_MOBILE_ADS_TAG, "actual size: " + size);
         
-        size.y += GetStatusBarHeight();
-        
-        Log.d(YANDEX_MOBILE_ADS_TAG, "result app size: " + size);
+        if (!isLandscape) {
+            size.y += GetStatusBarHeight();
+            
+            Log.d(YANDEX_MOBILE_ADS_TAG, "result app size: " + size);
+        }
         
         return size;
     }
@@ -286,7 +267,7 @@ public class QtYandexAdsActivity extends QtActivity {
 //                >= Configuration.SCREENLAYOUT_SIZE_LARGE;
 //    }
 
-    private int GetStatusBarHeight() {
+    public int GetStatusBarHeight() {
         
         AtomicBoolean isOnWaitingForUiThread = new AtomicBoolean(true);
         AtomicInteger result                 = new AtomicInteger(-1);

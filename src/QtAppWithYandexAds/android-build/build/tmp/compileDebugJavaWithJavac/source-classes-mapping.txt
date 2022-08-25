@@ -13,10 +13,8 @@ org/qtproject/qt5/android/bindings/QtLoader.java
  org.qtproject.qt5.android.bindings.QtLoader$4
 org/qtproject/qt5/android/bindings/QtActivity.java
  org.qtproject.qt5.android.bindings.QtActivity
-org/test/QtYandexAds/QtYandexAdsBanner.java
- org.test.QtYandexAds.QtYandexAdsBanner
- org.test.QtYandexAds.QtYandexAdsBanner$1
- org.test.QtYandexAds.QtYandexAdsBanner$2
+org/qtproject/qt5/android/bindings/QtServiceLoader.java
+ org.qtproject.qt5.android.bindings.QtServiceLoader
 org/qtproject/qt5/android/bindings/QtActivityLoader.java
  org.qtproject.qt5.android.bindings.QtActivityLoader
  org.qtproject.qt5.android.bindings.QtActivityLoader$1
@@ -33,6 +31,10 @@ org/kde/necessitas/ministro/IMinistroCallback.java
  org.kde.necessitas.ministro.IMinistroCallback$Default
  org.kde.necessitas.ministro.IMinistroCallback$Stub
  org.kde.necessitas.ministro.IMinistroCallback$Stub$Proxy
+org/test/QtYandexAds/QtYandexAdsBanner.java
+ org.test.QtYandexAds.QtYandexAdsBanner
+ org.test.QtYandexAds.QtYandexAdsBanner$1
+ org.test.QtYandexAds.QtYandexAdsBanner$2
 org/test/QtYandexAds/QtYandexAdsActivity.java
  org.test.QtYandexAds.QtYandexAdsActivity
  org.test.QtYandexAds.QtYandexAdsActivity$1
@@ -42,5 +44,3 @@ org/test/QtYandexAds/QtYandexAdsActivity.java
  org.test.QtYandexAds.QtYandexAdsActivity$5
  org.test.QtYandexAds.QtYandexAdsActivity$6
  org.test.QtYandexAds.QtYandexAdsActivity$7
-org/qtproject/qt5/android/bindings/QtServiceLoader.java
- org.qtproject.qt5.android.bindings.QtServiceLoader

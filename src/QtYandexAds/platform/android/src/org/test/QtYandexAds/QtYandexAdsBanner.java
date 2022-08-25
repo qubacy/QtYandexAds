@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import android.util.Log;
 import java.util.concurrent.atomic.AtomicBoolean;
 import android.util.DisplayMetrics;
+import android.graphics.Point;
 
 import androidx.annotation.NonNull;
 
@@ -28,12 +29,120 @@ public class QtYandexAdsBanner {
 
     private int m_BannerX = DEFAULT_AD_BANNER_X;
     private int m_BannerY;
+    
+    private int m_HorizontalAlignment = 0;
+    private int m_VerticalAlignment = 0;
 
     private BannerAdView m_BannerView;
 
     private boolean m_IsBannerLoaded = false;
 
     private QtYandexAdsActivity m_BannerActivity;
+    
+    public int GetHorizontalAlignment() {
+        return m_HorizontalAlignment;
+    }
+
+    public int GetVerticalAlignment() {
+        return m_VerticalAlignment;
+    }
+    
+    public void SetHorizontalAlignment(final int horizontalAlignment, final boolean isLandscape) {
+        if (m_BannerActivity == null) return;
+        
+        Point actualAppPoint = m_BannerActivity.GetActualAppSize(isLandscape);
+        
+        if (actualAppPoint == null) {
+            m_BannerActivity.onBannerLoadFail(m_BannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+        
+        int actualAppWidth = actualAppPoint.x;
+        
+        if (actualAppWidth < 0) {
+            m_BannerActivity.onBannerLoadFail(m_BannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+    
+        boolean result = false;
+        
+        switch (horizontalAlignment) {
+            case 1: {
+                result = SetAdBannerPosition(0, GetAdBannerY());
+                    
+                break;
+            } // right
+            case 2: { 
+                int midBannerX = actualAppWidth / 2 - GetAdBannerWidth() / 2;
+                
+                result = SetAdBannerPosition(midBannerX, GetAdBannerY());                
+                
+                break;
+            } // center
+            case 3: {
+                int leftBannerX = actualAppWidth - GetAdBannerWidth();
+                
+                result = SetAdBannerPosition(leftBannerX, GetAdBannerY());                
+                
+                break;
+            } // left
+        }
+        
+        if (!result)
+            m_BannerActivity.onBannerLoadFail(m_BannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+        m_HorizontalAlignment = horizontalAlignment;
+    }
+
+    public void SetVerticalAlignment(final int verticalAlignment, final boolean isLandscape) {
+        if (m_BannerActivity == null) return;
+        
+        Point actualAppPoint = m_BannerActivity.GetActualAppSize(isLandscape);
+        
+        if (actualAppPoint == null) {
+            m_BannerActivity.onBannerLoadFail(m_BannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+        
+        int actualAppHeight = actualAppPoint.y - GetAdBannerHeight();
+        
+        if (actualAppHeight < 0) {
+            m_BannerActivity.onBannerLoadFail(m_BannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+            return;
+        }
+    
+        boolean result = false;
+        
+        switch (verticalAlignment) {
+            case 1: {
+                result = SetAdBannerPosition(GetAdBannerX(), m_BannerActivity.GetStatusBarHeight());
+                    
+                break;
+            } // top
+            case 2: { 
+                int midBannerY = actualAppHeight / 2 + GetAdBannerHeight() / 2 - m_BannerActivity.GetStatusBarHeight() / 2;
+                
+                result = SetAdBannerPosition(GetAdBannerX(), midBannerY);                
+                
+                break;
+            } // center
+            case 3: {
+                result = SetAdBannerPosition(GetAdBannerX(), actualAppHeight);                
+                
+                break;
+            } // bottom
+        }
+        
+        if (!result)
+            m_BannerActivity.onBannerLoadFail(m_BannerId, AdRequestError.Code.SYSTEM_ERROR);
+            
+        m_VerticalAlignment = verticalAlignment;
+    }
+
 
     private void InitializeAdBanner(@NonNull Context context, boolean isInitial) {
         m_BannerView = new BannerAdView(context);
